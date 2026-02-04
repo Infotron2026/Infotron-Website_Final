@@ -9,8 +9,12 @@ const JobDetail = () => {
   const [job, setJob] = useState(null);
 
   useEffect(() => {
-    const foundJob = jobListings.find(j => j.id === jobId);
-    setJob(foundJob);
+    if (jobId) {
+      const foundJob = jobListings.find((j) => j.id === jobId);
+      if (foundJob) {
+        setJob(foundJob);
+      }
+    }
   }, [jobId]);
 
   if (!job) {
