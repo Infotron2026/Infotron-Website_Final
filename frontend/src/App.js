@@ -9,6 +9,7 @@ import BusinessConsulting from "@/pages/BusinessConsulting";
 import About from "@/pages/About";
 import Resources from "@/pages/Resources";
 import Careers from "@/pages/Careers";
+import JobDetail from "@/pages/JobDetail";
 import Contact from "@/pages/Contact";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/resources/case-studies/:id" element={<Resources />} />
           <Route path="/resources/blog/:slug" element={<Resources />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/:jobId" element={<JobDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<div className="min-h-screen pt-32 pb-20 px-6"><div className="max-w-4xl mx-auto"><h1 className="text-4xl font-bold mb-6">Privacy Policy</h1><p className="text-gray-600">Privacy policy content coming soon.</p></div></div>} />
           <Route path="/terms" element={<div className="min-h-screen pt-32 pb-20 px-6"><div className="max-w-4xl mx-auto"><h1 className="text-4xl font-bold mb-6">Terms of Service</h1><p className="text-gray-600">Terms of service content coming soon.</p></div></div>} />
