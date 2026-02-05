@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { 
@@ -6,52 +6,133 @@ import {
   TrendingUp, Shield, Globe, ArrowRight, CheckCircle 
 } from 'lucide-react';
 import { clientLogos, services, whyInfotron, caseStudies, testimonials } from '../data/mockData';
+import AbstractHeroGraphic from '../components/AbstractHeroGraphic';
 
 const Home = () => {
+  const observerRef = useRef(null);
+
+  useEffect(() => {
+    // Intersection Observer for scroll animations
+    const options = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    observerRef.current = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
+          entry.target.classList.remove('scroll-reveal');
+        }
+      });
+    }, options);
+
+    // Observe all elements with scroll-reveal class
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observerRef.current.observe(el);
+    });
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+      {/* Hero Section - Premium Version */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50">
+        {/* Abstract Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="gradient-mesh" />
+          <AbstractHeroGraphic />
+        </div>
+
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            {/* Content - Asymmetric Layout */}
+            <div className="animate-fade-in-left">
+              <div className="inline-block mb-6">
+                <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 text-sm font-semibold">
+                  Global IT Services & Consulting
+                </span>
+              </div>
+              
+              <h1 className="text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 leading-[1.1] mb-8">
                 Scale Your Technology Capabilities with{' '}
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
                   Execution Excellence
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              
+              <p className="text-xl lg:text-2xl text-gray-600 mb-10 leading-relaxed max-w-xl">
                 Infotron delivers Managed Services, Staff Augmentation, and Business Consulting 
                 to enterprises and growth-stage companies that demand speed, quality, and results.
               </p>
+              
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact?type=client">
-                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90 text-lg px-8 py-6">
-                    Schedule a Consultation
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                  <Button 
+                    size="lg" 
+                    className="cta-primary text-white text-lg px-10 py-7 rounded-lg shadow-lg relative overflow-hidden group"
+                  >
+                    <span className="relative z-10 flex items-center gap-3">
+                      Schedule a Consultation
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
                   </Button>
                 </Link>
                 <Link to="/careers">
-                  <Button size="lg" variant="outline" className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white text-lg px-8 py-6">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white text-lg px-10 py-7 rounded-lg transition-all duration-300"
+                  >
                     View Open Positions
                   </Button>
                 </Link>
               </div>
             </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?w=800&h=600&fit=crop&auto=format"
-                alt="Enterprise Technology Team"
-                className="rounded-lg shadow-2xl"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl border border-gray-100">
-                <div className="text-3xl font-bold text-blue-600">92%</div>
-                <div className="text-sm text-gray-600 mt-1">Client Retention Rate</div>
+
+            {/* Visual Element - Abstract Version */}
+            <div className="relative animate-fade-in-right lg:pl-12">
+              <div className="relative">
+                {/* Premium Abstract Composition */}
+                <div className="relative w-full h-[500px] rounded-2xl overflow-hidden">
+                  {/* Gradient Background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-2xl" />
+                  
+                  {/* Image with Overlay */}
+                  <img
+                    src="https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?w=800&h=600&fit=crop&auto=format"
+                    alt="Enterprise Technology Team"
+                    className="absolute inset-0 w-full h-full object-cover rounded-2xl mix-blend-luminosity opacity-60"
+                  />
+                  
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 rounded-2xl" />
+                </div>
+                
+                {/* Floating Stat Card */}
+                <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-2xl border border-gray-100 hover-lift">
+                  <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    92%
+                  </div>
+                  <div className="text-base text-gray-600 mt-2 font-medium">Client Retention Rate</div>
+                  <div className="mt-3 h-1 w-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
+                </div>
+                
+                {/* Abstract Accent Elements */}
+                <div className="absolute -top-6 -right-6 w-24 h-24 border-2 border-blue-500/20 rounded-full" style={{animation: 'pulse-glow 4s ease-in-out infinite'}} />
+                <div className="absolute -bottom-4 right-12 w-16 h-16 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg rotate-45" style={{animation: 'float-slow 6s ease-in-out infinite'}} />
               </div>
             </div>
           </div>
         </div>
+
+        {/* Bottom Gradient Fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* Client Logos */}
