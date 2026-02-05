@@ -203,39 +203,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              How We Deliver Results
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Three service models designed for speed, quality, and execution ownership
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service) => {
-              const IconComponent = service.icon === 'Server' ? Server : service.icon === 'Users' ? Users : Briefcase;
-              return (
-                <Link
-                  key={service.id}
-                  to={service.href}
-                  className="group bg-white border-2 border-gray-200 rounded-lg p-8 hover:border-blue-600 hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <IconComponent className="w-7 h-7 text-blue-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">{service.shortDesc}</p>
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:gap-2 transition-all">
-                    Learn More
-                    <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
 
       {/* Why Infotron */}
       <section className="py-32 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 relative overflow-hidden">
