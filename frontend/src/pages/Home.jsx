@@ -6,7 +6,6 @@ import {
   TrendingUp, Shield, Globe, ArrowRight, CheckCircle 
 } from 'lucide-react';
 import { clientLogos, services, whyInfotron, caseStudies, testimonials } from '../data/mockData';
-import AbstractHeroGraphic from '../components/AbstractHeroGraphic';
 
 const Home = () => {
   const observerRef = useRef(null);
@@ -41,98 +40,141 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Premium Version */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-40 overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50">
-        {/* Abstract Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="gradient-mesh" />
-          <AbstractHeroGraphic />
+      {/* BOLD HERO SECTION - Full Width, High Impact */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Animated Background Layer */}
+        <div className="absolute inset-0">
+          {/* Animated Gradient Mesh */}
+          <div className="absolute inset-0 opacity-40">
+            <div 
+              className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(59, 130, 246, 0.5) 0%, transparent 70%)',
+                animation: 'float-slow 20s ease-in-out infinite',
+                filter: 'blur(80px)'
+              }}
+            />
+            <div 
+              className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle, rgba(147, 51, 234, 0.5) 0%, transparent 70%)',
+                animation: 'float-slow 25s ease-in-out infinite',
+                animationDelay: '5s',
+                filter: 'blur(80px)'
+              }}
+            />
+            <div 
+              className="absolute top-1/2 left-1/2 w-[700px] h-[700px] rounded-full -translate-x-1/2 -translate-y-1/2"
+              style={{
+                background: 'radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%)',
+                animation: 'pulse-glow 15s ease-in-out infinite',
+                filter: 'blur(100px)'
+              }}
+            />
+          </div>
+
+          {/* Animated Grid Lines */}
+          <svg className="absolute inset-0 w-full h-full opacity-20" style={{mixBlendMode: 'screen'}}>
+            <defs>
+              <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="0.5"/>
+              </pattern>
+              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8"/>
+                <stop offset="100%" stopColor="#9333ea" stopOpacity="0.8"/>
+              </linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            
+            {/* Animated flowing lines */}
+            {[...Array(5)].map((_, i) => (
+              <path
+                key={i}
+                d={`M ${i * 20} 0 Q ${i * 30 + 200} ${i * 150 + 200}, ${i * 40 + 400} 100vh`}
+                stroke="url(#lineGradient)"
+                strokeWidth="2"
+                fill="none"
+                opacity="0.3"
+                style={{
+                  animation: 'draw-line 10s ease-in-out infinite',
+                  animationDelay: `${i * 2}s`
+                }}
+              />
+            ))}
+          </svg>
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            {/* Content - Asymmetric Layout */}
-            <div className="animate-fade-in-left">
-              <div className="inline-block mb-6">
-                <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 text-sm font-semibold">
-                  Global IT Services & Consulting
-                </span>
-              </div>
-              
-              <h1 className="text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-900 leading-[1.1] mb-8">
-                Scale Your Technology Capabilities with{' '}
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-                  Execution Excellence
-                </span>
-              </h1>
-              
-              <p className="text-xl lg:text-2xl text-gray-600 mb-10 leading-relaxed max-w-xl">
-                Infotron delivers Managed Services, Staff Augmentation, and Business Consulting 
-                to enterprises and growth-stage companies that demand speed, quality, and results.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact?type=client">
-                  <Button 
-                    size="lg" 
-                    className="cta-primary text-white text-lg px-10 py-7 rounded-lg shadow-lg relative overflow-hidden group"
-                  >
-                    <span className="relative z-10 flex items-center gap-3">
-                      Schedule a Consultation
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </Button>
-                </Link>
-                <Link to="/careers">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white text-lg px-10 py-7 rounded-lg transition-all duration-300"
-                  >
-                    View Open Positions
-                  </Button>
-                </Link>
-              </div>
+        {/* Hero Content */}
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 py-32">
+          <div className="text-center">
+            {/* Badge */}
+            <div className="animate-fade-in mb-8">
+              <span className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 text-sm font-bold tracking-wider uppercase">
+                ⚡ Global IT Services & Consulting Partner
+              </span>
             </div>
 
-            {/* Visual Element - Abstract Version */}
-            <div className="relative animate-fade-in-right lg:pl-12">
-              <div className="relative">
-                {/* Premium Abstract Composition */}
-                <div className="relative w-full h-[500px] rounded-2xl overflow-hidden">
-                  {/* Gradient Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-blue-500/10 rounded-2xl" />
-                  
-                  {/* Image with Overlay */}
-                  <img
-                    src="https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?w=800&h=600&fit=crop&auto=format"
-                    alt="Enterprise Technology Team"
-                    className="absolute inset-0 w-full h-full object-cover rounded-2xl mix-blend-luminosity opacity-60"
-                  />
-                  
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 rounded-2xl" />
+            {/* Oversized Headline */}
+            <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-[0.95] mb-10 tracking-tight animate-fade-in-up">
+              Scale Technology<br />
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400 bg-clip-text text-transparent">
+                With Execution<br />Excellence
+              </span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-xl md:text-2xl lg:text-3xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed font-medium animate-fade-in-up delay-200">
+              Managed Services · Staff Augmentation · Business Consulting<br/>
+              <span className="text-white/80">Trusted by Fortune 500 & High-Growth Companies</span>
+            </p>
+
+            {/* CTA Buttons - BOLD */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up delay-300">
+              <Link to="/contact?type=client">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-gray-900 hover:bg-blue-50 text-xl font-bold px-12 py-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <span className="flex items-center gap-3">
+                    Schedule a Consultation
+                    <ArrowRight className="w-6 h-6" />
+                  </span>
+                </Button>
+              </Link>
+              <Link to="/careers">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-3 border-white/40 text-white hover:bg-white/10 backdrop-blur-sm text-xl font-bold px-12 py-8 rounded-xl transition-all duration-300"
+                >
+                  Explore Careers
+                </Button>
+              </Link>
+            </div>
+
+            {/* Stats Row */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 max-w-5xl mx-auto animate-fade-in-up delay-400">
+              {[
+                { num: '500+', label: 'Projects Delivered' },
+                { num: '92%', label: 'Client Retention' },
+                { num: '1000+', label: 'Tech Professionals' },
+                { num: '15+', label: 'Years Experience' }
+              ].map((stat, i) => (
+                <div key={i} className="text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                  <div className="text-4xl lg:text-5xl font-black text-white mb-2">{stat.num}</div>
+                  <div className="text-sm lg:text-base text-blue-200 font-semibold">{stat.label}</div>
                 </div>
-                
-                {/* Floating Stat Card */}
-                <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-2xl border border-gray-100 hover-lift">
-                  <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                    92%
-                  </div>
-                  <div className="text-base text-gray-600 mt-2 font-medium">Client Retention Rate</div>
-                  <div className="mt-3 h-1 w-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
-                </div>
-                
-                {/* Abstract Accent Elements */}
-                <div className="absolute -top-6 -right-6 w-24 h-24 border-2 border-blue-500/20 rounded-full" style={{animation: 'pulse-glow 4s ease-in-out infinite'}} />
-                <div className="absolute -bottom-4 right-12 w-16 h-16 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg rotate-45" style={{animation: 'float-slow 6s ease-in-out infinite'}} />
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Bottom Gradient Fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
+            <div className="w-1.5 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
+          </div>
+        </div>
       </section>
 
       {/* Client Logos */}
