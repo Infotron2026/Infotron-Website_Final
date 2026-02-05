@@ -136,18 +136,24 @@ const Home = () => {
       </section>
 
       {/* Client Logos */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <p className="text-center text-gray-600 mb-12 font-semibold">
-            TRUSTED BY LEADING GLOBAL ORGANIZATIONS
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 geometric-pattern" />
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+          <p className="text-center text-gray-500 mb-12 font-semibold tracking-wider text-sm uppercase scroll-reveal">
+            Trusted by Leading Global Organizations
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+          <div className="section-divider mb-12" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center scroll-reveal">
             {clientLogos.map((client, index) => (
-              <div key={index} className="grayscale hover:grayscale-0 transition-all duration-300">
+              <div 
+                key={index} 
+                className="grayscale hover:grayscale-0 transition-all duration-500 hover-scale"
+                style={{animationDelay: `${index * 0.1}s`}}
+              >
                 <img
                   src={client.logo}
                   alt={client.alt}
-                  className="h-16 object-contain opacity-60 hover:opacity-100 transition-opacity"
+                  className="h-16 object-contain opacity-50 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -156,9 +162,47 @@ const Home = () => {
       </section>
 
       {/* Core Services */}
-      <section className="py-24">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white" />
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="text-center mb-20 scroll-reveal">
+            <div className="inline-block mb-4">
+              <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase">Our Services</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              How We Deliver Results
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Three service models designed for speed, quality, and execution ownership
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service, index) => {
+              const IconComponent = service.icon === 'Server' ? Server : service.icon === 'Users' ? Users : Briefcase;
+              return (
+                <Link
+                  key={service.id}
+                  to={service.href}
+                  className={`group premium-card bg-white rounded-2xl p-10 hover-lift scroll-reveal delay-${index * 100 + 200}`}
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 icon-glow">
+                    <IconComponent className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">{service.shortDesc}</p>
+                  <div className="flex items-center text-blue-600 font-semibold group-hover:gap-2 transition-all">
+                    Learn More
+                    <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-2 transition-transform duration-300" />
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               How We Deliver Results
             </h2>
