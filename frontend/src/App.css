@@ -48,6 +48,12 @@ html {
     }
     50% {
         opacity: 0.6;
+
+/* Animated gradient for text */
+.animate-gradient {
+    animation: gradient-shift 8s ease infinite;
+}
+
         transform: scale(1.05);
     }
 }

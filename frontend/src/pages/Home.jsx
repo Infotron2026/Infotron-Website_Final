@@ -439,27 +439,50 @@ const Home = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Scale Your Technology Capabilities?
-          </h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            Let's discuss how Infotron can accelerate your technology roadmap with 
-            elite talent and execution-focused delivery.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact?type=client">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-6">
-                Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            <Link to="/services/managed-services">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-6">
-                Explore Our Services
-              </Button>
-            </Link>
+      <section className="py-32 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto] relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-white/10 rounded-full filter blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/5 rounded-full filter blur-3xl" style={{animation: 'float-slow 15s ease-in-out infinite'}} />
+        </div>
+        
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center relative z-10">
+          <div className="scroll-reveal">
+            <div className="inline-block mb-6">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold">
+                Ready to Get Started?
+              </span>
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+              Ready to Scale Your<br />Technology Capabilities?
+            </h2>
+            <p className="text-xl lg:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Let's discuss how Infotron can accelerate your technology roadmap with 
+              elite talent and execution-focused delivery.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link to="/contact?type=client">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-10 py-7 rounded-lg shadow-2xl hover:shadow-white/20 transition-all duration-300 hover:scale-105"
+                >
+                  <span className="flex items-center gap-3">
+                    Schedule a Consultation
+                    <ArrowRight className="w-5 h-5" />
+                  </span>
+                </Button>
+              </Link>
+              <Link to="/services/managed-services">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-10 py-7 rounded-lg transition-all duration-300"
+                >
+                  Explore Our Services
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
