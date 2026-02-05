@@ -336,10 +336,19 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-gray-900 text-white">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+      <section className="py-32 bg-gray-900 text-white relative overflow-hidden">
+        {/* Abstract Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl" />
+        </div>
+        
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="text-center mb-20 scroll-reveal">
+            <div className="inline-block mb-4">
+              <span className="text-blue-400 font-semibold text-sm tracking-wider uppercase">Testimonials</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -348,19 +357,30 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-gray-800 rounded-lg p-8 hover:bg-gray-750 transition-colors">
-                <p className="text-gray-300 leading-relaxed mb-6 italic">
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={testimonial.id} 
+                className={`testimonial-card bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 scroll-reveal delay-${index * 100 + 200}`}
+              >
+                {/* Quote Icon */}
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                
+                <p className="text-gray-300 leading-relaxed mb-8 italic text-lg">
                   "{testimonial.quote}"
                 </p>
-                <div className="flex items-center gap-4">
+                
+                <div className="flex items-center gap-4 pt-6 border-t border-gray-700">
                   <img
                     src={testimonial.image}
                     alt={testimonial.author}
-                    className="w-14 h-14 rounded-full object-cover"
+                    className="w-14 h-14 rounded-full object-cover ring-2 ring-blue-500/30"
                   />
                   <div>
-                    <div className="font-semibold text-white">{testimonial.author}</div>
+                    <div className="font-semibold text-white text-lg">{testimonial.author}</div>
                     <div className="text-sm text-gray-400">{testimonial.title}</div>
                     <div className="text-sm text-gray-500">{testimonial.company}</div>
                   </div>
