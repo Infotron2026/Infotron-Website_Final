@@ -203,42 +203,82 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Core Services */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white" />
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+
+      {/* BOLD SERVICES SECTION - Consulting Style */}
+      <section className="relative py-32 bg-white overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-50 to-purple-50 rounded-full filter blur-3xl opacity-30" />
+        
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 relative z-10">
+          {/* Section Header - BOLD */}
           <div className="text-center mb-20 scroll-reveal">
-            <div className="inline-block mb-4">
-              <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase">Our Services</span>
+            <div className="inline-block mb-6">
+              <span className="text-blue-600 font-black text-sm tracking-[0.2em] uppercase">Our Services</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              How We Deliver Results
+            <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 leading-tight">
+              Three Ways We<br/>Deliver Excellence
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Three service models designed for speed, quality, and execution ownership
-            </p>
+            <div className="w-32 h-2 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Services Grid - BOLD GRAPHIC LAYOUT */}
+          <div className="grid lg:grid-cols-3 gap-0">
             {services.map((service, index) => {
               const IconComponent = service.icon === 'Server' ? Server : service.icon === 'Users' ? Users : Briefcase;
+              const gradients = [
+                'from-blue-600 to-cyan-500',
+                'from-purple-600 to-pink-500',
+                'from-indigo-600 to-blue-500'
+              ];
+              
               return (
                 <Link
                   key={service.id}
                   to={service.href}
-                  className={`group premium-card bg-white rounded-2xl p-10 hover-lift scroll-reveal delay-${index * 100 + 200}`}
+                  className={`group relative bg-gradient-to-br ${gradients[index]} p-12 lg:p-16 hover:scale-[1.02] transition-all duration-500 scroll-reveal delay-${index * 200 + 200}`}
+                  style={{
+                    clipPath: index === 1 ? 'polygon(0 5%, 100% 0, 100% 95%, 0 100%)' : 'none'
+                  }}
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 icon-glow">
-                    <IconComponent className="w-8 h-8 text-blue-600" />
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+                      backgroundSize: '40px 40px'
+                    }} />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">{service.shortDesc}</p>
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:gap-2 transition-all">
-                    Learn More
-                    <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-2 transition-transform duration-300" />
+
+                  {/* Content */}
+                  <div className="relative z-10">
+                    {/* Large Icon */}
+                    <div className="mb-8">
+                      <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                        <IconComponent className="w-12 h-12 text-white" strokeWidth={2.5} />
+                      </div>
+                      <div className="text-sm font-black tracking-wider text-white/70 uppercase">
+                        0{index + 1}
+                      </div>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-3xl lg:text-4xl font-black text-white mb-6 leading-tight">
+                      {service.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-lg text-white/90 leading-relaxed mb-8 font-medium">
+                      {service.shortDesc}
+                    </p>
+
+                    {/* CTA */}
+                    <div className="flex items-center gap-3 text-white font-bold group-hover:gap-5 transition-all duration-300">
+                      <span className="text-lg">Explore Service</span>
+                      <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" strokeWidth={3} />
+                    </div>
                   </div>
+
+                  {/* Hover Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </Link>
               );
             })}
