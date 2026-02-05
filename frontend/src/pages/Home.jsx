@@ -236,11 +236,16 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* Why Infotron */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+      <section className="py-32 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 relative overflow-hidden">
+        <div className="absolute inset-0 geometric-pattern opacity-30" />
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+          <div className="text-center mb-20 scroll-reveal">
+            <div className="inline-block mb-4">
+              <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase">Why Infotron</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Why Leading Organizations Choose Infotron
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -253,12 +258,16 @@ const Home = () => {
               const IconMap = { Zap, Target, Award, TrendingUp, Shield, Globe };
               const IconComponent = IconMap[item.icon];
               return (
-                <div key={index} className="bg-white rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                    <IconComponent className="w-6 h-6 text-white" />
+                <div 
+                  key={index} 
+                  className={`premium-card bg-white rounded-2xl p-8 hover-lift scroll-reveal delay-${index * 100 + 200}`}
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mb-6 icon-glow">
+                    <IconComponent className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  <div className="mt-4 h-1 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
                 </div>
               );
             })}
