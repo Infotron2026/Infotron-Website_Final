@@ -298,10 +298,10 @@ const Home = () => {
               <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase">Why Infotron</span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why Leading Organizations Choose Infotron
+              Why CTOs Choose Infotron
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're not just another staffing firm — we're a delivery partner with skin in the game
+              Not another staffing firm. A delivery partner with skin in the game.
             </p>
           </div>
 
