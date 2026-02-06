@@ -27,21 +27,21 @@ export const services = [
   {
     id: "managed-services",
     title: "Managed Services",
-    shortDesc: "End-to-end technology operations with full accountability and delivery ownership",
+    shortDesc: "We own the delivery. You own the outcome. Full-stack teams that ship on time.",
     icon: "Server",
     href: "/services/managed-services"
   },
   {
     id: "staff-augmentation",
     title: "Staff Augmentation",
-    shortDesc: "Elite technology talent integrated seamlessly into your existing teams",
+    shortDesc: "Senior engineers who deploy in weeks, not months. No ramp-up. Immediate impact.",
     icon: "Users",
     href: "/services/staff-augmentation"
   },
   {
     id: "business-consulting",
     title: "Business Consulting",
-    shortDesc: "Strategic technology advisory and transformation leadership",
+    shortDesc: "Former CTOs and VPs of Engineering. Strategic execution, not PowerPoint decks.",
     icon: "Briefcase",
     href: "/services/business-consulting"
   }
@@ -49,33 +49,33 @@ export const services = [
 
 export const whyInfotron = [
   {
-    title: "Speed to Delivery",
-    description: "Teams deployed in 2-3 weeks, not months. We move at the pace your business demands.",
+    title: "2-Week Deploy",
+    description: "Senior teams live in 14 days. No 6-month searches. No false starts.",
     icon: "Zap"
   },
   {
-    title: "Execution Ownership",
-    description: "We don't just staff — we deliver. Full accountability for outcomes, not just hours.",
+    title: "We Own Outcomes",
+    description: "Missed deadline? Our problem. Scope creep? We handle it. You focus on business.",
     icon: "Target"
   },
   {
-    title: "Elite Talent Pool",
-    description: "Top 5% global technology professionals vetted for technical excellence and business acumen.",
+    title: "Top 5% Only",
+    description: "We reject 95% of applicants. You get engineers who've scaled $100M+ platforms.",
     icon: "Award"
   },
   {
-    title: "Industry Expertise",
-    description: "Deep experience in FinTech, SaaS, Trading, Healthcare, and Enterprise Technology.",
+    title: "Domain Expertise",
+    description: "FinTech. Trading systems. Enterprise SaaS. Healthcare. We've built them all.",
     icon: "TrendingUp"
   },
   {
-    title: "Client Retention",
-    description: "92% client retention rate. Our partners stay because we deliver consistent results.",
+    title: "92% Retention",
+    description: "Clients renew because we ship. Not because of contracts.",
     icon: "Shield"
   },
   {
-    title: "Global Reach",
-    description: "US-headquartered with global delivery capabilities across Americas, EMEA, and APAC.",
+    title: "US + Global",
+    description: "Headquarters in the US. Delivery worldwide. Time zones that match yours.",
     icon: "Globe"
   }
 ];

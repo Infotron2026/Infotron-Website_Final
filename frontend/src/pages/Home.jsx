@@ -110,22 +110,22 @@ const Home = () => {
             {/* Badge */}
             <div className="animate-fade-in mb-8">
               <span className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 text-sm font-bold tracking-wider uppercase">
-                ⚡ Global IT Services & Consulting Partner
+                Enterprise Technology Delivery
               </span>
             </div>
 
             {/* Oversized Headline */}
             <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-[0.95] mb-10 tracking-tight animate-fade-in-up">
-              Scale Technology<br />
+              We Don't Staff.<br />
               <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400 bg-clip-text text-transparent">
-                With Execution<br />Excellence
+                We Deliver.
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl md:text-2xl lg:text-3xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed font-medium animate-fade-in-up delay-200">
-              Managed Services · Staff Augmentation · Business Consulting<br/>
-              <span className="text-white/80">Trusted by Fortune 500 & High-Growth Companies</span>
+              Full-stack technology teams that own outcomes — not hours.<br/>
+              <span className="text-white/80">Built for CTOs who need execution, not excuses.</span>
             </p>
 
             {/* CTA Buttons - BOLD */}
@@ -136,7 +136,7 @@ const Home = () => {
                   className="bg-white text-gray-900 hover:bg-blue-50 text-xl font-bold px-12 py-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300"
                 >
                   <span className="flex items-center gap-3">
-                    Schedule a Consultation
+                    Talk to Our Team
                     <ArrowRight className="w-6 h-6" />
                   </span>
                 </Button>
@@ -147,7 +147,7 @@ const Home = () => {
                   variant="outline" 
                   className="border-3 border-white/40 text-white hover:bg-white/10 backdrop-blur-sm text-xl font-bold px-12 py-8 rounded-xl transition-all duration-300"
                 >
-                  Explore Careers
+                  Join Our Teams
                 </Button>
               </Link>
             </div>
@@ -213,11 +213,14 @@ const Home = () => {
           {/* Section Header - BOLD */}
           <div className="text-center mb-20 scroll-reveal">
             <div className="inline-block mb-6">
-              <span className="text-blue-600 font-black text-sm tracking-[0.2em] uppercase">Our Services</span>
+              <span className="text-blue-600 font-black text-sm tracking-[0.2em] uppercase">How We Work</span>
             </div>
             <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 leading-tight">
-              Three Ways We<br/>Deliver Excellence
+              Three Engagement<br/>Models. One Goal.
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Your results. Our accountability.
+            </p>
             <div className="w-32 h-2 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
           </div>
 
