@@ -11,7 +11,6 @@ const Home = () => {
   const observerRef = useRef(null);
 
   useEffect(() => {
-    // Intersection Observer for scroll animations
     const options = {
       threshold: 0.1,
       rootMargin: '0px 0px -100px 0px'
@@ -26,7 +25,6 @@ const Home = () => {
       });
     }, options);
 
-    // Observe all elements with scroll-reveal class
     document.querySelectorAll('.scroll-reveal').forEach(el => {
       observerRef.current.observe(el);
     });
@@ -40,141 +38,105 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* BOLD HERO SECTION - Full Width, High Impact */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        {/* Animated Background Layer */}
-        <div className="absolute inset-0">
-          {/* Animated Gradient Mesh */}
-          <div className="absolute inset-0 opacity-40">
-            <div 
-              className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full"
-              style={{
-                background: 'radial-gradient(circle, rgba(59, 130, 246, 0.5) 0%, transparent 70%)',
-                animation: 'float-slow 20s ease-in-out infinite',
-                filter: 'blur(80px)'
-              }}
-            />
-            <div 
-              className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full"
-              style={{
-                background: 'radial-gradient(circle, rgba(147, 51, 234, 0.5) 0%, transparent 70%)',
-                animation: 'float-slow 25s ease-in-out infinite',
-                animationDelay: '5s',
-                filter: 'blur(80px)'
-              }}
-            />
-            <div 
-              className="absolute top-1/2 left-1/2 w-[700px] h-[700px] rounded-full -translate-x-1/2 -translate-y-1/2"
-              style={{
-                background: 'radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%)',
-                animation: 'pulse-glow 15s ease-in-out infinite',
-                filter: 'blur(100px)'
-              }}
-            />
+      {/* LUXURY HERO SECTION - Clean, Minimal, Premium */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-50 via-white to-white">
+        {/* Subtle Abstract Background - Animated Noise/Mesh */}
+        <div className="absolute inset-0 opacity-40">
+          {/* Animated gradient orbs - very subtle */}
+          <div 
+            className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full"
+            style={{
+              background: 'radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%)',
+              animation: 'float-slow 25s ease-in-out infinite',
+              filter: 'blur(60px)'
+            }}
+          />
+          <div 
+            className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full"
+            style={{
+              background: 'radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, transparent 70%)',
+              animation: 'float-slow 30s ease-in-out infinite',
+              animationDelay: '5s',
+              filter: 'blur(60px)'
+            }}
+          />
+          
+          {/* Subtle grid pattern */}
+          <div 
+            className="absolute inset-0 opacity-[0.02]"
+            style={{
+              backgroundImage: `
+                linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '60px 60px'
+            }}
+          />
+        </div>
+
+        {/* Hero Content - Centered, Clean */}
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-12 py-32 text-center">
+          {/* Small badge */}
+          <div className="animate-fade-in mb-8">
+            <span className="inline-flex items-center px-4 py-2 rounded-full border border-gray-200 bg-white/80 backdrop-blur-sm text-gray-600 text-xs font-semibold tracking-wider uppercase shadow-sm">
+              Enterprise Technology Delivery
+            </span>
           </div>
 
-          {/* Animated Grid Lines */}
-          <svg className="absolute inset-0 w-full h-full opacity-20" style={{mixBlendMode: 'screen'}}>
-            <defs>
-              <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="0.5"/>
-              </pattern>
-              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8"/>
-                <stop offset="100%" stopColor="#9333ea" stopOpacity="0.8"/>
-              </linearGradient>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-            
-            {/* Animated flowing lines */}
-            {[...Array(5)].map((_, i) => (
-              <path
-                key={i}
-                d={`M ${i * 20} 0 Q ${i * 30 + 200} ${i * 150 + 200}, ${i * 40 + 400} 100vh`}
-                stroke="url(#lineGradient)"
-                strokeWidth="2"
-                fill="none"
-                opacity="0.3"
-                style={{
-                  animation: 'draw-line 10s ease-in-out infinite',
-                  animationDelay: `${i * 2}s`
-                }}
-              />
+          {/* Bold, Short Headline - Premium Typography */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-gray-900 leading-[1.1] mb-8 tracking-tight animate-fade-in-up">
+            Outcomes.<br />
+            Not Headcount.
+          </h1>
+
+          {/* Executive Subheading */}
+          <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed font-normal animate-fade-in-up delay-200">
+            Full-stack engineering teams that own delivery.<br/>
+            <span className="text-gray-500">Built for CTOs who measure results, not hours.</span>
+          </p>
+
+          {/* CTA Buttons - Premium, Minimal */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-300">
+            <Link to="/contact?type=client">
+              <Button 
+                size="lg" 
+                className="group relative bg-gray-900 text-white hover:bg-gray-800 text-base font-semibold px-10 py-7 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
+              >
+                <span className="flex items-center gap-2">
+                  Talk to Our Team
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Button>
+            </Link>
+            <Link to="/careers">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-gray-300 text-gray-700 hover:border-gray-900 hover:bg-gray-50 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
+              >
+                View Open Positions
+              </Button>
+            </Link>
+          </div>
+
+          {/* Minimal Stats - Clean Typography */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mt-24 max-w-4xl mx-auto animate-fade-in-up delay-400">
+            {[
+              { num: '500+', label: 'Projects' },
+              { num: '92%', label: 'Retention' },
+              { num: '1000+', label: 'Engineers' },
+              { num: '15Y', label: 'Experience' }
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-4xl md:text-5xl font-black text-gray-900 mb-1">{stat.num}</div>
+                <div className="text-sm text-gray-500 font-medium tracking-wide uppercase">{stat.label}</div>
+              </div>
             ))}
-          </svg>
-        </div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 py-32">
-          <div className="text-center">
-            {/* Badge */}
-            <div className="animate-fade-in mb-8">
-              <span className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 text-sm font-bold tracking-wider uppercase">
-                Enterprise Technology Delivery
-              </span>
-            </div>
-
-            {/* Oversized Headline */}
-            <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-[0.95] mb-10 tracking-tight animate-fade-in-up">
-              We Don't Staff.<br />
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400 bg-clip-text text-transparent">
-                We Deliver.
-              </span>
-            </h1>
-
-            {/* Subheadline */}
-            <p className="text-xl md:text-2xl lg:text-3xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed font-medium animate-fade-in-up delay-200">
-              Full-stack technology teams that own outcomes — not hours.<br/>
-              <span className="text-white/80">Built for CTOs who need execution, not excuses.</span>
-            </p>
-
-            {/* CTA Buttons - BOLD */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up delay-300">
-              <Link to="/contact?type=client">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-gray-900 hover:bg-blue-50 text-xl font-bold px-12 py-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300"
-                >
-                  <span className="flex items-center gap-3">
-                    Talk to Our Team
-                    <ArrowRight className="w-6 h-6" />
-                  </span>
-                </Button>
-              </Link>
-              <Link to="/careers">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-3 border-white/40 text-white hover:bg-white/10 backdrop-blur-sm text-xl font-bold px-12 py-8 rounded-xl transition-all duration-300"
-                >
-                  Join Our Teams
-                </Button>
-              </Link>
-            </div>
-
-            {/* Stats Row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 max-w-5xl mx-auto animate-fade-in-up delay-400">
-              {[
-                { num: '500+', label: 'Projects Delivered' },
-                { num: '92%', label: 'Client Retention' },
-                { num: '1000+', label: 'Tech Professionals' },
-                { num: '15+', label: 'Years Experience' }
-              ].map((stat, i) => (
-                <div key={i} className="text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                  <div className="text-4xl lg:text-5xl font-black text-white mb-2">{stat.num}</div>
-                  <div className="text-sm lg:text-base text-blue-200 font-semibold">{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
-            <div className="w-1.5 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
+        {/* Subtle bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* Client Logos */}
