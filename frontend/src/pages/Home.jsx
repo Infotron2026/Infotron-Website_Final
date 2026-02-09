@@ -38,15 +38,15 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* LUXURY HERO SECTION - Clean, Minimal, Premium */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-50 via-white to-white">
-        {/* Subtle Abstract Background - Animated Noise/Mesh */}
-        <div className="absolute inset-0 opacity-40">
-          {/* Animated gradient orbs - very subtle */}
+      {/* LUXURY HERO SECTION - Clean, Minimal, Premium with Brand Colors */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50/30 via-white to-purple-50/20">
+        {/* Subtle Abstract Background - Animated Blue-Purple Mesh */}
+        <div className="absolute inset-0 opacity-50">
+          {/* Animated gradient orbs - Infotron brand colors */}
           <div 
             className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full"
             style={{
-              background: 'radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%)',
               animation: 'float-slow 25s ease-in-out infinite',
               filter: 'blur(60px)'
             }}
@@ -54,20 +54,28 @@ const Home = () => {
           <div 
             className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full"
             style={{
-              background: 'radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(147, 51, 234, 0.1) 0%, transparent 70%)',
               animation: 'float-slow 30s ease-in-out infinite',
               animationDelay: '5s',
               filter: 'blur(60px)'
             }}
           />
-          
-          {/* Subtle grid pattern */}
           <div 
-            className="absolute inset-0 opacity-[0.02]"
+            className="absolute top-1/2 left-1/2 w-[400px] h-[400px] rounded-full -translate-x-1/2 -translate-y-1/2"
+            style={{
+              background: 'radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%)',
+              animation: 'pulse-glow 20s ease-in-out infinite',
+              filter: 'blur(70px)'
+            }}
+          />
+          
+          {/* Subtle grid pattern with brand color tint */}
+          <div 
+            className="absolute inset-0 opacity-[0.03]"
             style={{
               backgroundImage: `
-                linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+                linear-gradient(rgba(37, 99, 235, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(147, 51, 234, 0.3) 1px, transparent 1px)
               `,
               backgroundSize: '60px 60px'
             }}
@@ -76,16 +84,19 @@ const Home = () => {
 
         {/* Hero Content - Centered, Clean */}
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-12 py-32 text-center">
-          {/* Small badge */}
+          {/* Small badge with gradient */}
           <div className="animate-fade-in mb-8">
-            <span className="inline-flex items-center px-4 py-2 rounded-full border border-gray-200 bg-white/80 backdrop-blur-sm text-gray-600 text-xs font-semibold tracking-wider uppercase shadow-sm">
+            <span className="inline-flex items-center px-4 py-2 rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-50 to-purple-50 text-gray-700 text-xs font-semibold tracking-wider uppercase shadow-sm">
               Enterprise Technology Delivery
             </span>
           </div>
 
-          {/* Bold, Short Headline - Premium Typography */}
+          {/* Bold, Short Headline - Premium Typography with Brand Gradient */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-gray-900 leading-[1.1] mb-8 tracking-tight animate-fade-in-up">
-            Outcomes.<br />
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Outcomes.
+            </span>
+            <br />
             Not Headcount.
           </h1>
 
@@ -95,12 +106,12 @@ const Home = () => {
             <span className="text-gray-500">Built for CTOs who measure results, not hours.</span>
           </p>
 
-          {/* CTA Buttons - Premium, Minimal */}
+          {/* CTA Buttons - Premium with Brand Gradient */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-300">
             <Link to="/contact?type=client">
               <Button 
                 size="lg" 
-                className="group relative bg-gray-900 text-white hover:bg-gray-800 text-base font-semibold px-10 py-7 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
+                className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-xl hover:shadow-blue-500/30 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <span className="flex items-center gap-2">
                   Talk to Our Team
@@ -112,7 +123,7 @@ const Home = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-gray-300 text-gray-700 hover:border-gray-900 hover:bg-gray-50 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
+                className="border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50/50 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
               >
                 View Open Positions
               </Button>

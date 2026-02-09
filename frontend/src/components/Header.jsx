@@ -13,22 +13,22 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo - Using Uploaded Infotron Logo */}
-          <Link to="/" className="flex items-center">
+        <div className="flex items-center justify-between h-24">
+          {/* Logo - Enhanced Size & Presence */}
+          <Link to="/" className="flex items-center py-2">
             <img 
               src="https://customer-assets.emergentagent.com/job_delivery-first-io/artifacts/o4ojtjom_INFOTRON%20Main%20Logo%20800x600.jpg" 
               alt="Infotron Solutions" 
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Refined */}
           <nav className="hidden lg:flex items-center gap-8">
             <Link
               to="/"
-              className={`text-sm font-medium transition-colors ${
-                isActive('/') ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+              className={`text-sm font-normal transition-colors ${
+                isActive('/') ? 'text-gray-900' : 'text-gray-600 hover:text-blue-600'
               }`}
             >
               Home
@@ -40,30 +40,30 @@ const Header = () => {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+              <button className="flex items-center gap-1 text-sm font-normal text-gray-600 hover:text-blue-600 transition-colors">
                 Services
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className="w-3.5 h-3.5" />
               </button>
 
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-100 py-2">
                   <Link
                     to="/services/managed-services"
-                    className="block px-6 py-3 hover:bg-gray-50 transition-colors"
+                    className="block px-6 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all"
                   >
                     <div className="font-semibold text-gray-900 text-sm">Managed Services</div>
                     <div className="text-xs text-gray-600 mt-1">Full-stack teams that own delivery</div>
                   </Link>
                   <Link
                     to="/services/staff-augmentation"
-                    className="block px-6 py-3 hover:bg-gray-50 transition-colors"
+                    className="block px-6 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all"
                   >
                     <div className="font-semibold text-gray-900 text-sm">Staff Augmentation</div>
                     <div className="text-xs text-gray-600 mt-1">Senior engineers in 2 weeks</div>
                   </Link>
                   <Link
                     to="/services/business-consulting"
-                    className="block px-6 py-3 hover:bg-gray-50 transition-colors"
+                    className="block px-6 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all"
                   >
                     <div className="font-semibold text-gray-900 text-sm">Business Consulting</div>
                     <div className="text-xs text-gray-600 mt-1">Former CTOs and VPs of Engineering</div>
@@ -74,8 +74,8 @@ const Header = () => {
 
             <Link
               to="/about"
-              className={`text-sm font-medium transition-colors ${
-                isActive('/about') ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+              className={`text-sm font-normal transition-colors ${
+                isActive('/about') ? 'text-gray-900' : 'text-gray-600 hover:text-blue-600'
               }`}
             >
               About
@@ -83,8 +83,8 @@ const Header = () => {
 
             <Link
               to="/resources"
-              className={`text-sm font-medium transition-colors ${
-                isActive('/resources') ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+              className={`text-sm font-normal transition-colors ${
+                isActive('/resources') ? 'text-gray-900' : 'text-gray-600 hover:text-blue-600'
               }`}
             >
               Resources
@@ -92,8 +92,8 @@ const Header = () => {
 
             <Link
               to="/careers"
-              className={`text-sm font-medium transition-colors ${
-                isActive('/careers') ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+              className={`text-sm font-normal transition-colors ${
+                isActive('/careers') ? 'text-gray-900' : 'text-gray-600 hover:text-blue-600'
               }`}
             >
               Careers
@@ -101,23 +101,23 @@ const Header = () => {
 
             <Link
               to="/contact"
-              className={`text-sm font-medium transition-colors ${
-                isActive('/contact') ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
+              className={`text-sm font-normal transition-colors ${
+                isActive('/contact') ? 'text-gray-900' : 'text-gray-600 hover:text-blue-600'
               }`}
             >
               Contact
             </Link>
           </nav>
 
-          {/* CTA Buttons - Refined */}
+          {/* CTA Buttons - Refined with Brand Colors */}
           <div className="hidden lg:flex items-center gap-3">
             <Link to="/careers">
-              <Button variant="ghost" className="text-gray-700 hover:text-gray-900 text-sm font-medium">
+              <Button variant="ghost" className="text-gray-600 hover:text-blue-600 text-sm font-normal">
                 Careers
               </Button>
             </Link>
             <Link to="/contact?type=client">
-              <Button className="bg-gray-900 text-white hover:bg-gray-800 text-sm font-semibold px-6 shadow-sm">
+              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg hover:shadow-blue-500/30 text-sm font-semibold px-6 transition-all duration-300">
                 Talk to Us
               </Button>
             </Link>
