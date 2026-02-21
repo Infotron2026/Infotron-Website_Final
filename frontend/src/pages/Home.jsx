@@ -68,16 +68,11 @@ const Home = () => {
 
           {/* Bold, Short Headline - Premium Typography */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.1] mb-8 tracking-tight animate-fade-in-up">
-            <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Outcomes.
-              </span>
-              {/* Gradient underline */}
-              <span 
-                className="absolute bottom-0 left-0 w-full h-[6px] rounded-full"
-                style={{ 
-                  background: 'linear-gradient(to right, #6C63FF, #8E44FF)',
-                  opacity: 0.85
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Outcomes.
+            </span>
+            <br />
+            Not Headcount.
                 }}
               />
             </span>
