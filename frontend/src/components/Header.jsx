@@ -11,10 +11,10 @@ const Header = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-md border-b border-gray-100 shadow-sm">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between py-3.5 lg:py-5">
-          {/* Logo - Transparent, Proportionate */}
+          {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="https://customer-assets.emergentagent.com/job_delivery-first-io/artifacts/o4ojtjom_INFOTRON%20Main%20Logo%20800x600.jpg" 
