@@ -70,9 +70,9 @@ const Home = () => {
           </h1>
 
           {/* Executive Subheading */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed font-normal animate-fade-in-up delay-200">
+          <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-normal animate-fade-in-up delay-200">
             Full-stack engineering teams that own delivery.<br/>
-            <span className="text-gray-500">Built for CTOs who measure results, not hours.</span>
+            <span className="text-white/70">Built for CTOs who measure results, not hours.</span>
           </p>
 
           {/* CTA Buttons - Premium with Brand Gradient */}
@@ -92,19 +92,25 @@ const Home = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50/50 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
+                className="border-2 border-white/80 text-white hover:bg-white hover:text-gray-900 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
               >
                 View Open Positions
               </Button>
             </Link>
           </div>
+        </div>
 
-          {/* Build. Operate. Transfer. - Delivery Model Section */}
-          <div className="mt-32 max-w-5xl mx-auto animate-fade-in-up delay-400">
-            {/* Section with subtle gradient background */}
-            <div className="relative bg-white rounded-2xl border border-gray-100 p-12 lg:p-16 shadow-xl">
-              {/* Subtle gradient accent */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 rounded-t-2xl" />
+        {/* Subtle bottom fade to white */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+      </section>
+
+      {/* Build. Operate. Transfer. - Delivery Model Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-6 lg:px-12">
+          {/* Section with subtle gradient background */}
+          <div className="relative bg-white rounded-2xl border border-gray-100 p-12 lg:p-16 shadow-xl">
+            {/* Subtle gradient accent */}
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 rounded-t-2xl" />
               
               <div className="text-center mb-10">
                 <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4 tracking-tight">
