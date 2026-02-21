@@ -91,7 +91,7 @@ const Home = () => {
             <div className="relative animate-fade-in">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.pexels.com/photos/1181360/pexels-photo-1181360.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                  src="https://images.pexels.com/photos/8297454/pexels-photo-8297454.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                   alt="Diverse women professionals collaborating"
                   className="w-full h-[500px] lg:h-[600px] object-cover"
                 />
@@ -159,32 +159,6 @@ const Home = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Client Logos */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 geometric-pattern" />
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
-          <p className="text-center text-gray-500 mb-12 font-semibold tracking-wider text-sm uppercase scroll-reveal">
-            Trusted by Leading Global Organizations
-          </p>
-          <div className="section-divider mb-12" />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center scroll-reveal">
-            {clientLogos.map((client, index) => (
-              <div 
-                key={index} 
-                className="grayscale hover:grayscale-0 transition-all duration-500 hover-scale"
-                style={{animationDelay: `${index * 0.1}s`}}
-              >
-                <img
-                  src={client.logo}
-                  alt={client.alt}
-                  className="h-16 object-contain opacity-50 hover:opacity-100 transition-opacity duration-300"
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>
