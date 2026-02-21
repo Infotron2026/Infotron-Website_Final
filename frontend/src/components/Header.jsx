@@ -84,7 +84,7 @@ const Header = () => {
             <Link
               to="/resources"
               className={`text-sm font-normal transition-colors ${
-                isActive('/resources') ? 'text-gray-900' : 'text-gray-600 hover:text-blue-600'
+                isActive('/resources') ? 'text-emerald-400' : 'text-gray-300 hover:text-emerald-400'
               }`}
             >
               Resources
@@ -93,7 +93,7 @@ const Header = () => {
             <Link
               to="/careers"
               className={`text-sm font-normal transition-colors ${
-                isActive('/careers') ? 'text-gray-900' : 'text-gray-600 hover:text-blue-600'
+                isActive('/careers') ? 'text-emerald-400' : 'text-gray-300 hover:text-emerald-400'
               }`}
             >
               Careers
@@ -102,7 +102,7 @@ const Header = () => {
             <Link
               to="/contact"
               className={`text-sm font-normal transition-colors ${
-                isActive('/contact') ? 'text-gray-900' : 'text-gray-600 hover:text-blue-600'
+                isActive('/contact') ? 'text-emerald-400' : 'text-gray-300 hover:text-emerald-400'
               }`}
             >
               Contact
@@ -112,12 +112,12 @@ const Header = () => {
           {/* CTA Buttons - Refined with Brand Colors */}
           <div className="hidden lg:flex items-center gap-3">
             <Link to="/careers">
-              <Button variant="ghost" className="text-gray-600 hover:text-blue-600 text-sm font-normal">
+              <Button variant="ghost" className="text-gray-300 hover:text-emerald-400 text-sm font-normal">
                 Careers
               </Button>
             </Link>
             <Link to="/contact?type=client">
-              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg hover:shadow-blue-500/30 text-sm font-semibold px-6 transition-all duration-300">
+              <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white hover:shadow-lg hover:shadow-emerald-500/30 text-sm font-semibold px-6 transition-all duration-300">
                 Talk to Us
               </Button>
             </Link>
@@ -125,7 +125,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gray-700"
+            className="lg:hidden text-gray-300"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
