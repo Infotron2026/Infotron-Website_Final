@@ -38,62 +38,31 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* LUXURY HERO SECTION - Clean, Minimal, Premium with Brand Colors */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50/30 via-white to-purple-50/20">
-        {/* Subtle Abstract Background - Animated Blue-Purple Mesh */}
-        <div className="absolute inset-0 opacity-50">
-          {/* Animated gradient orbs - Infotron brand colors */}
-          <div 
-            className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full"
-            style={{
-              background: 'radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%)',
-              animation: 'float-slow 25s ease-in-out infinite',
-              filter: 'blur(60px)'
-            }}
+      {/* LUXURY HERO SECTION - Full Background Image with Overlay */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Full-width Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+            alt="Diverse technology team collaborating"
+            className="w-full h-full object-cover"
           />
-          <div 
-            className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full"
-            style={{
-              background: 'radial-gradient(circle, rgba(147, 51, 234, 0.1) 0%, transparent 70%)',
-              animation: 'float-slow 30s ease-in-out infinite',
-              animationDelay: '5s',
-              filter: 'blur(60px)'
-            }}
-          />
-          <div 
-            className="absolute top-1/2 left-1/2 w-[400px] h-[400px] rounded-full -translate-x-1/2 -translate-y-1/2"
-            style={{
-              background: 'radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%)',
-              animation: 'pulse-glow 20s ease-in-out infinite',
-              filter: 'blur(70px)'
-            }}
-          />
-          
-          {/* Subtle grid pattern with brand color tint */}
-          <div 
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(37, 99, 235, 0.3) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(147, 51, 234, 0.3) 1px, transparent 1px)
-              `,
-              backgroundSize: '60px 60px'
-            }}
-          />
+          {/* Dark overlay for text readability - 50% opacity */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-gray-900/50 to-gray-900/60" />
         </div>
 
         {/* Hero Content - Centered, Clean */}
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-12 py-32 text-center">
           {/* Small badge with gradient */}
           <div className="animate-fade-in mb-8">
-            <span className="inline-flex items-center px-4 py-2 rounded-full border border-blue-200/50 bg-gradient-to-r from-blue-50 to-purple-50 text-gray-700 text-xs font-semibold tracking-wider uppercase shadow-sm">
+            <span className="inline-flex items-center px-4 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-white text-xs font-semibold tracking-wider uppercase shadow-sm">
               Enterprise Technology Delivery
             </span>
           </div>
 
-          {/* Bold, Short Headline - Premium Typography with Brand Gradient */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-gray-900 leading-[1.1] mb-8 tracking-tight animate-fade-in-up">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          {/* Bold, Short Headline - Premium Typography */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.1] mb-8 tracking-tight animate-fade-in-up">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Outcomes.
             </span>
             <br />
