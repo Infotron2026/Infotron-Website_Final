@@ -43,8 +43,8 @@ const Home = () => {
         {/* Full-width Background Image with Scale */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.pexels.com/photos/8938645/pexels-photo-8938645.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-            alt="Diverse technology team collaborating"
+            src="https://images.unsplash.com/photo-1758520144667-3041caeff3c1?auto=format&fit=crop&w=1920&q=80"
+            alt="Technology professional working with multiple screens"
             className="w-full h-full object-cover"
             style={{ transform: 'scale(1.04)' }}
           />
