@@ -48,11 +48,11 @@ const Home = () => {
             className="w-full h-full object-cover"
             style={{ transform: 'scale(1.04)' }}
           />
-          {/* Left-to-right gradient overlay */}
+          {/* Darker overlay for text readability */}
           <div 
             className="absolute inset-0"
             style={{ 
-              background: 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 100%)'
+              background: 'linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%)'
             }}
           />
         </div>
