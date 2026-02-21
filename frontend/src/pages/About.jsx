@@ -64,9 +64,9 @@ const About = () => {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1763550662603-78aa2f2033bf?w=800&h=600&fit=crop&auto=format"
-                alt="Infotron Team"
-                className="rounded-lg shadow-xl"
+                src="https://images.pexels.com/photos/1367272/pexels-photo-1367272.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                alt="Infotron Team Collaboration"
+                className="rounded-xl shadow-2xl"
               />
             </div>
           </div>

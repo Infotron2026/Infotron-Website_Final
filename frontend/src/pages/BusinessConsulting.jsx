@@ -50,9 +50,9 @@ const BusinessConsulting = () => {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1758518732175-5d608ba3abdf?w=800&h=600&fit=crop&auto=format"
+                src="https://images.unsplash.com/photo-1621062089461-01f1eaebb66c?w=800&h=600&fit=crop&auto=format"
                 alt="Executive Strategy Session"
-                className="rounded-lg shadow-2xl"
+                className="rounded-xl shadow-2xl"
               />
             </div>
           </div>

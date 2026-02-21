@@ -50,9 +50,9 @@ const StaffAugmentation = () => {
             </div>
             <div>
               <img
-                src="https://images.pexels.com/photos/5256687/pexels-photo-5256687.jpeg?w=800&h=600&fit=crop&auto=format"
+                src="https://images.unsplash.com/photo-1573167507387-6b4b98cb7c13?w=800&h=600&fit=crop&auto=format"
                 alt="Professional Technology Team"
-                className="rounded-lg shadow-2xl"
+                className="rounded-xl shadow-2xl"
               />
             </div>
           </div>

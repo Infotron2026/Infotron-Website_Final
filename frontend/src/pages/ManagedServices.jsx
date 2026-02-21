@@ -50,9 +50,9 @@ const ManagedServices = () => {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1762968274962-20c12e6e8ecd?w=800&h=600&fit=crop&auto=format"
+                src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=800&h=600&fit=crop&auto=format"
                 alt="Managed Technology Operations"
-                className="rounded-lg shadow-2xl"
+                className="rounded-xl shadow-2xl"
               />
             </div>
           </div>
