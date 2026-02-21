@@ -39,27 +39,27 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* HERO SECTION - Split Layout */}
-      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
+      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-slate-900 via-emerald-950 to-cyan-950">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Text Content */}
             <div className="animate-fade-in-up">
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-gray-700 text-xs font-semibold tracking-wider uppercase mb-8">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-semibold tracking-wider uppercase mb-8">
                 Enterprise Technology Delivery
               </span>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-[1.1] mb-8 tracking-tight">
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight">
+                <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                   Outcomes.
                 </span>
                 <br />
                 Not Headcount.
               </h1>
 
-              <p className="text-xl md:text-2xl text-gray-600 mb-6 leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-300 mb-6 leading-relaxed">
                 Full-stack engineering teams that own delivery.
               </p>
-              <p className="text-lg text-gray-500 mb-10">
+              <p className="text-lg text-gray-400 mb-10">
                 Built for CTOs who measure results, not hours.
               </p>
 
@@ -67,7 +67,7 @@ const Home = () => {
                 <Link to="/contact?type=client">
                   <Button 
                     size="lg" 
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-xl hover:shadow-blue-500/30 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300 hover:-translate-y-1"
+                    className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white hover:shadow-xl hover:shadow-emerald-500/30 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300 hover:-translate-y-1"
                   >
                     <span className="flex items-center gap-2">
                       Talk to Our Team
@@ -79,7 +79,7 @@ const Home = () => {
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
+                    className="border-2 border-emerald-400/50 text-emerald-300 hover:bg-emerald-500/20 hover:border-emerald-400 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
                   >
                     View Open Positions
                   </Button>
@@ -89,15 +89,15 @@ const Home = () => {
 
             {/* Right - Image */}
             <div className="relative animate-fade-in">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/20">
                 <img 
-                  src="https://images.pexels.com/photos/8297454/pexels-photo-8297454.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                  alt="Diverse women professionals collaborating"
+                  src="https://images.pexels.com/photos/1181422/pexels-photo-1181422.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                  alt="Diverse women tech professionals collaborating"
                   className="w-full h-[500px] lg:h-[600px] object-cover"
                 />
               </div>
               {/* Decorative elements */}
-              <div className="absolute -z-10 -top-6 -right-6 w-full h-full bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl opacity-50"></div>
+              <div className="absolute -z-10 -top-6 -right-6 w-full h-full bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 rounded-2xl"></div>
             </div>
           </div>
         </div>
