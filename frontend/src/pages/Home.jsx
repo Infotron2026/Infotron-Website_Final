@@ -73,11 +73,6 @@ const Home = () => {
             </span>
             <br />
             Not Headcount.
-                }}
-              />
-            </span>
-            <br />
-            Not Headcount.
           </h1>
 
           {/* Executive Subheading */}
