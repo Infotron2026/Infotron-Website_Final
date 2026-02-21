@@ -25,18 +25,18 @@ const StaffAugmentation = () => {
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Hero */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-purple-50 to-blue-50">
+      <section className="py-24 lg:py-32 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-8">
                 <Users className="w-4 h-4" />
                 Staff Augmentation
               </div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-8">
                 Elite Technology Talent Integrated Seamlessly into Your Teams
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed mb-8">
+              <p className="text-lg lg:text-xl text-gray-600 leading-relaxed mb-10">
                 Scale your engineering capacity with hand-picked professionals who integrate as 
                 true team members — not contractors. Get the skills you need, when you need them, 
                 without the overhead of permanent hiring.

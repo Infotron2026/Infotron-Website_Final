@@ -8,13 +8,13 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white pt-20">
       {/* Hero */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="py-24 lg:py-32 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-8">
               Built for Enterprise Technology Delivery
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
               Infotron Solutions is a US-headquartered IT services and talent solutions firm 
               delivering Managed Services, Staff Augmentation, and Business Consulting to organizations 
               that demand execution excellence.
