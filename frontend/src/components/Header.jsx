@@ -19,7 +19,7 @@ const Header = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_delivery-first-io/artifacts/o4ojtjom_INFOTRON%20Main%20Logo%20800x600.jpg" 
               alt="Infotron Solutions" 
-              className="h-[56px] lg:h-[80px] w-auto object-contain"
+              className="h-[72px] lg:h-[100px] w-auto object-contain"
             />
           </Link>
 
