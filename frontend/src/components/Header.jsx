@@ -28,7 +28,7 @@ const Header = () => {
             <Link
               to="/"
               className={`text-sm font-normal transition-colors ${
-                isActive('/') ? 'text-gray-900' : 'text-gray-600 hover:text-blue-600'
+                isActive('/') ? 'text-emerald-400' : 'text-gray-300 hover:text-emerald-400'
               }`}
             >
               Home
@@ -40,33 +40,33 @@ const Header = () => {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 text-sm font-normal text-gray-600 hover:text-blue-600 transition-colors">
+              <button className="flex items-center gap-1 text-sm font-normal text-gray-300 hover:text-emerald-400 transition-colors">
                 Services
                 <ChevronDown className="w-3.5 h-3.5" />
               </button>
 
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-100 py-2">
+                <div className="absolute top-full left-0 mt-2 w-72 bg-slate-800 rounded-lg shadow-xl border border-emerald-500/20 py-2">
                   <Link
                     to="/services/managed-services"
-                    className="block px-6 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all"
+                    className="block px-6 py-3 hover:bg-emerald-500/10 transition-all"
                   >
-                    <div className="font-semibold text-gray-900 text-sm">Managed Services</div>
-                    <div className="text-xs text-gray-600 mt-1">Full-stack teams that own delivery</div>
+                    <div className="font-semibold text-white text-sm">Managed Services</div>
+                    <div className="text-xs text-gray-400 mt-1">Full-stack teams that own delivery</div>
                   </Link>
                   <Link
                     to="/services/staff-augmentation"
-                    className="block px-6 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all"
+                    className="block px-6 py-3 hover:bg-emerald-500/10 transition-all"
                   >
-                    <div className="font-semibold text-gray-900 text-sm">Staff Augmentation</div>
-                    <div className="text-xs text-gray-600 mt-1">Senior engineers in 2 weeks</div>
+                    <div className="font-semibold text-white text-sm">Staff Augmentation</div>
+                    <div className="text-xs text-gray-400 mt-1">Senior engineers in 2 weeks</div>
                   </Link>
                   <Link
                     to="/services/business-consulting"
-                    className="block px-6 py-3 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all"
+                    className="block px-6 py-3 hover:bg-emerald-500/10 transition-all"
                   >
-                    <div className="font-semibold text-gray-900 text-sm">Business Consulting</div>
-                    <div className="text-xs text-gray-600 mt-1">Former CTOs and VPs of Engineering</div>
+                    <div className="font-semibold text-white text-sm">Business Consulting</div>
+                    <div className="text-xs text-gray-400 mt-1">Former CTOs and VPs of Engineering</div>
                   </Link>
                 </div>
               )}
@@ -75,7 +75,7 @@ const Header = () => {
             <Link
               to="/about"
               className={`text-sm font-normal transition-colors ${
-                isActive('/about') ? 'text-gray-900' : 'text-gray-600 hover:text-blue-600'
+                isActive('/about') ? 'text-emerald-400' : 'text-gray-300 hover:text-emerald-400'
               }`}
             >
               About
