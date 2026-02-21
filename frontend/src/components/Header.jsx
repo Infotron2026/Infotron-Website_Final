@@ -19,8 +19,8 @@ const Header = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_delivery-first-io/artifacts/o4ojtjom_INFOTRON%20Main%20Logo%20800x600.jpg" 
               alt="Infotron Solutions" 
-              className="h-14 w-auto object-contain"
-              style={{ maxWidth: '220px' }}
+              className="h-20 md:h-20 w-auto object-contain"
+              style={{ maxWidth: '280px' }}
             />
           </Link>
 

@@ -343,6 +343,50 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Professional Team Banner */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-3 gap-6">
+            <div className="relative rounded-2xl overflow-hidden h-72 shadow-xl group">
+              <img 
+                src="https://images.unsplash.com/photo-1758873268663-5a362616b5a7?w=800&h=600&fit=crop&auto=format" 
+                alt="Diverse professional team" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <div className="text-2xl font-bold">Global Teams</div>
+                <div className="text-sm opacity-90">Diverse talent across continents</div>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden h-72 shadow-xl group">
+              <img 
+                src="https://images.pexels.com/photos/1367272/pexels-photo-1367272.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
+                alt="Multicultural team collaboration" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <div className="text-2xl font-bold">Collaborative Culture</div>
+                <div className="text-sm opacity-90">World-class engineering teams</div>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden h-72 shadow-xl group">
+              <img 
+                src="https://images.unsplash.com/photo-1621062089461-01f1eaebb66c?w=800&h=600&fit=crop&auto=format" 
+                alt="Executive professional" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <div className="text-2xl font-bold">Executive Leadership</div>
+                <div className="text-sm opacity-90">Senior talent, real impact</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Case Studies Preview */}
       <section className="py-24">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -484,22 +528,35 @@ const Home = () => {
                 </Button>
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-8 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-                <div className="text-sm text-gray-700 font-medium">Projects Delivered</div>
+            {/* Professional Team Imagery Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative rounded-xl overflow-hidden h-48 shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?w=600&h=400&fit=crop&auto=format" 
+                  alt="Professional business consultant" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg p-8 text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">92%</div>
-                <div className="text-sm text-gray-700 font-medium">Client Retention</div>
+              <div className="relative rounded-xl overflow-hidden h-48 shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1573167507387-6b4b98cb7c13?w=600&h=400&fit=crop&auto=format" 
+                  alt="Team meeting in boardroom" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-8 text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">1000+</div>
-                <div className="text-sm text-gray-700 font-medium">Tech Professionals</div>
+              <div className="relative rounded-xl overflow-hidden h-48 shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1580894732930-0babd100d356?w=600&h=400&fit=crop&auto=format" 
+                  alt="Software engineer at work" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg p-8 text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">15+</div>
-                <div className="text-sm text-gray-700 font-medium">Years Experience</div>
+              <div className="relative rounded-xl overflow-hidden h-48 shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1573497491207-618cc224f243?w=600&h=400&fit=crop&auto=format" 
+                  alt="Business professional leader" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
             </div>
           </div>
