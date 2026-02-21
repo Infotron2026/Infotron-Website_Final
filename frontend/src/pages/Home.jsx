@@ -189,9 +189,9 @@ const Home = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon === 'Server' ? Server : service.icon === 'Users' ? Users : Briefcase;
               const gradients = [
-                'from-blue-600 to-cyan-500',
-                'from-purple-600 to-pink-500',
-                'from-indigo-600 to-blue-500'
+                'from-emerald-600 to-cyan-600',
+                'from-cyan-600 to-teal-600',
+                'from-teal-600 to-emerald-600'
               ];
               
               return (
