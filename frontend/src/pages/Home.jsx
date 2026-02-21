@@ -104,24 +104,24 @@ const Home = () => {
       </section>
 
       {/* Build. Operate. Transfer. - Delivery Model Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-slate-900">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           {/* Section with subtle gradient background */}
-          <div className="relative bg-white rounded-2xl border border-gray-100 p-12 lg:p-16 shadow-xl">
+          <div className="relative bg-slate-800/50 rounded-2xl border border-emerald-500/20 p-12 lg:p-16 shadow-xl backdrop-blur">
             {/* Subtle gradient accent */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 rounded-t-2xl" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-emerald-500 rounded-t-2xl" />
             
             <div className="text-center mb-10">
-              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4 tracking-tight">
+              <h2 className="text-4xl lg:text-5xl font-black text-white mb-4 tracking-tight">
                 Build. Operate. Transfer.
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
                 A delivery-first model designed for companies that want speed now — and ownership later.
               </p>
             </div>
 
             {/* Body Copy */}
-            <p className="text-lg text-gray-600 leading-relaxed mb-10 max-w-3xl mx-auto text-center">
+            <p className="text-lg text-gray-400 leading-relaxed mb-10 max-w-3xl mx-auto text-center">
               We help companies build high-performing engineering teams, operate them to deliver real outcomes, 
               and transfer full ownership when the organization is ready. This model reduces execution risk, 
               accelerates time-to-market, and ensures long-term continuity — without vendor lock-in.
@@ -130,31 +130,31 @@ const Home = () => {
             {/* Three Pillars */}
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl font-black text-blue-600">B</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/30 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl font-black text-emerald-400">B</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Build</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-3">Build</h3>
+                <p className="text-gray-400 leading-relaxed">
                   Assemble and onboard senior, outcome-driven teams
                 </p>
               </div>
 
               <div className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl font-black text-purple-600">O</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-cyan-600/10 border border-cyan-500/30 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl font-black text-cyan-400">O</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Operate</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-3">Operate</h3>
+                <p className="text-gray-400 leading-relaxed">
                   Own delivery, quality, and execution
                 </p>
               </div>
 
               <div className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">T</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-cyan-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl font-black bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">T</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Transfer</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-3">Transfer</h3>
+                <p className="text-gray-400 leading-relaxed">
                   Seamlessly transition teams, systems, and knowledge
                 </p>
               </div>
