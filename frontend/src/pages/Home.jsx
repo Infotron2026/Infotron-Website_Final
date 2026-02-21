@@ -40,15 +40,21 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       {/* LUXURY HERO SECTION - Full Background Image with Overlay */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Full-width Background Image */}
+        {/* Full-width Background Image with Scale */}
         <div className="absolute inset-0">
           <img 
             src="https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
             alt="Diverse technology team collaborating"
             className="w-full h-full object-cover"
+            style={{ transform: 'scale(1.04)' }}
           />
-          {/* Dark overlay for text readability - 50% opacity */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-gray-900/50 to-gray-900/60" />
+          {/* Left-to-right gradient overlay */}
+          <div 
+            className="absolute inset-0"
+            style={{ 
+              background: 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 100%)'
+            }}
+          />
         </div>
 
         {/* Hero Content - Centered, Clean */}
@@ -62,8 +68,18 @@ const Home = () => {
 
           {/* Bold, Short Headline - Premium Typography */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.1] mb-8 tracking-tight animate-fade-in-up">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Outcomes.
+            <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Outcomes.
+              </span>
+              {/* Gradient underline */}
+              <span 
+                className="absolute bottom-0 left-0 w-full h-[6px] rounded-full"
+                style={{ 
+                  background: 'linear-gradient(to right, #6C63FF, #8E44FF)',
+                  opacity: 0.85
+                }}
+              />
             </span>
             <br />
             Not Headcount.
