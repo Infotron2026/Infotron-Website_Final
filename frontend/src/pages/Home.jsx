@@ -165,23 +165,23 @@ const Home = () => {
 
 
       {/* BOLD SERVICES SECTION - Consulting Style */}
-      <section className="relative py-32 bg-white overflow-hidden">
+      <section className="relative py-32 bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-blue-50 to-purple-50 rounded-full filter blur-3xl opacity-30" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-emerald-900/30 to-cyan-900/30 rounded-full filter blur-3xl" />
         
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 relative z-10">
           {/* Section Header - BOLD */}
           <div className="text-center mb-20 scroll-reveal">
             <div className="inline-block mb-6">
-              <span className="text-blue-600 font-black text-sm tracking-[0.2em] uppercase">How We Work</span>
+              <span className="text-emerald-400 font-black text-sm tracking-[0.2em] uppercase">How We Work</span>
             </div>
-            <h2 className="text-5xl lg:text-7xl font-black text-gray-900 mb-8 leading-tight">
+            <h2 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight">
               Three Engagement<br/>Models. One Goal.
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
               Your results. Our accountability.
             </p>
-            <div className="w-32 h-2 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+            <div className="w-32 h-2 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto rounded-full" />
           </div>
 
           {/* Services Grid - BOLD GRAPHIC LAYOUT */}
