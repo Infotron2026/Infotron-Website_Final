@@ -38,76 +38,69 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* LUXURY HERO SECTION - Full Background Image with Overlay */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Full-width Background Image with Scale */}
-        <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1758520144667-3041caeff3c1?auto=format&fit=crop&w=1920&q=80"
-            alt="Technology professional working with multiple screens"
-            className="w-full h-full object-cover"
-            style={{ transform: 'scale(1.04)' }}
-          />
-          {/* Darker overlay for text readability */}
-          <div 
-            className="absolute inset-0"
-            style={{ 
-              background: 'linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%)'
-            }}
-          />
-        </div>
+      {/* HERO SECTION - Split Layout */}
+      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left - Text Content */}
+            <div className="animate-fade-in-up">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-purple-100 text-gray-700 text-xs font-semibold tracking-wider uppercase mb-8">
+                Enterprise Technology Delivery
+              </span>
 
-        {/* Hero Content - Centered, Clean */}
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-12 py-32 text-center">
-          {/* Small badge with gradient */}
-          <div className="animate-fade-in mb-8">
-            <span className="inline-flex items-center px-4 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-white text-xs font-semibold tracking-wider uppercase shadow-sm">
-              Enterprise Technology Delivery
-            </span>
-          </div>
-
-          {/* Bold, Short Headline - Premium Typography */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-[1.1] mb-8 tracking-tight animate-fade-in-up">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Outcomes.
-            </span>
-            <br />
-            Not Headcount.
-          </h1>
-
-          {/* Executive Subheading */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-normal animate-fade-in-up delay-200">
-            Full-stack engineering teams that own delivery.<br/>
-            <span className="text-white/70">Built for CTOs who measure results, not hours.</span>
-          </p>
-
-          {/* CTA Buttons - Premium with Brand Gradient */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-300">
-            <Link to="/contact?type=client">
-              <Button 
-                size="lg" 
-                className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-xl hover:shadow-blue-500/30 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                <span className="flex items-center gap-2">
-                  Talk to Our Team
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-[1.1] mb-8 tracking-tight">
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Outcomes.
                 </span>
-              </Button>
-            </Link>
-            <Link to="/careers">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-white/80 text-white hover:bg-white hover:text-gray-900 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
-              >
-                View Open Positions
-              </Button>
-            </Link>
+                <br />
+                Not Headcount.
+              </h1>
+
+              <p className="text-xl md:text-2xl text-gray-600 mb-6 leading-relaxed">
+                Full-stack engineering teams that own delivery.
+              </p>
+              <p className="text-lg text-gray-500 mb-10">
+                Built for CTOs who measure results, not hours.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/contact?type=client">
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-xl hover:shadow-blue-500/30 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <span className="flex items-center gap-2">
+                      Talk to Our Team
+                      <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Button>
+                </Link>
+                <Link to="/careers">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
+                  >
+                    View Open Positions
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right - Image */}
+            <div className="relative animate-fade-in">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.pexels.com/photos/8555432/pexels-photo-8555432.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                  alt="Diverse team celebrating success"
+                  className="w-full h-[500px] lg:h-[600px] object-cover"
+                />
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -z-10 -top-6 -right-6 w-full h-full bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl opacity-50"></div>
+            </div>
           </div>
         </div>
-
-        {/* Subtle bottom fade to white */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* Build. Operate. Transfer. - Delivery Model Section */}
