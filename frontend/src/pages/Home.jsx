@@ -91,8 +91,8 @@ const Home = () => {
             <div className="relative animate-fade-in">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.pexels.com/photos/8555432/pexels-photo-8555432.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                  alt="Diverse team celebrating success"
+                  src="https://images.pexels.com/photos/1181360/pexels-photo-1181360.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                  alt="Diverse women professionals collaborating"
                   className="w-full h-[500px] lg:h-[600px] object-cover"
                 />
               </div>
