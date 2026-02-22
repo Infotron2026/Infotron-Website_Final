@@ -17,9 +17,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="https://customer-assets.emergentagent.com/job_delivery-first-io/artifacts/o4ojtjom_INFOTRON%20Main%20Logo%20800x600.jpg" 
+              src="https://customer-assets.emergentagent.com/job_9e7beba8-14e2-44de-8374-3ab1c3cccef8/artifacts/hgqw9370_Logo%20white%20no%20background.png" 
               alt="Infotron Solutions" 
-              className="h-[72px] lg:h-[100px] w-auto object-contain"
+              className="h-[100px] w-auto object-contain"
             />
           </Link>
 
