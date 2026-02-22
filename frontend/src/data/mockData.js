@@ -137,27 +137,17 @@ export const caseStudies = [
 export const testimonials = [
   {
     id: 1,
-    quote: "Infotron didn't just provide resources — they took ownership of our entire infrastructure modernization. The team operated like an extension of our leadership, not just contractors.",
-    author: "Michael Chen",
-    title: "CTO",
-    company: "FinTech Platform",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&auto=format"
+    quote: "By seamlessly integrating with the internal team, Infotron helped achieve key objectives by performing to the same expectations as full-time employees.",
+    author: "Surendra Pathak",
+    title: "Founder & CEO",
+    company: "Interlynk"
   },
   {
     id: 2,
-    quote: "We evaluated multiple firms including Big 4 consultancies. Infotron delivered faster, at higher quality, and with significantly better ROI. They've been our technology partner for 3 years running.",
-    author: "Sarah Williams",
-    title: "Chief Product Officer",
-    company: "Enterprise SaaS",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&auto=format"
-  },
-  {
-    id: 3,
-    quote: "In 15 years of building trading systems, I've never worked with a more technically sophisticated and execution-focused team. They understood our quantitative requirements immediately.",
-    author: "David Martinez",
-    title: "Head of Technology",
-    company: "Institutional Trading Firm",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&auto=format"
+    quote: "Infotron has been a great business partner, providing great quality resource to augment high-performing and fast-moving teams.",
+    author: "Amit Mishra",
+    title: "Sr. Director, Engineering",
+    company: "Fox Sports"
   }
 ];
 
