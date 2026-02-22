@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-slate-950 text-white border-t border-emerald-500/20">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
-          <div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-              Infotron Solutions
-            </div>
+          <div className="lg:col-span-2">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_9e7beba8-14e2-44de-8374-3ab1c3cccef8/artifacts/hgqw9370_Logo%20white%20no%20background.png" 
+              alt="Infotron Solutions" 
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-gray-400 mb-6">
               Delivering enterprise IT services, elite talent, and strategic consulting to global organizations.
             </p>
@@ -19,7 +21,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/infotron-solutions"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
             >
               <Linkedin className="w-5 h-5" />
               Follow us on LinkedIn
@@ -28,7 +30,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Services</h3>
+            <h3 className="font-semibold text-lg mb-4 text-emerald-400">Services</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/services/managed-services" className="text-gray-400 hover:text-white transition-colors">
@@ -50,7 +52,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
+            <h3 className="font-semibold text-lg mb-4 text-emerald-400">Company</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
@@ -77,21 +79,23 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Get in Touch</h3>
+            <h3 className="font-semibold text-lg mb-4 text-emerald-400">Get in Touch</h3>
             <ul className="space-y-3 text-gray-400">
-              <li>
-                <a href="mailto:info@infotron-solutions.com" className="hover:text-white transition-colors">
-                  info@infotron-solutions.com
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-emerald-400" />
+                <a href="mailto:contact@infotronsolutions.com" className="hover:text-white transition-colors">
+                  contact@infotronsolutions.com
                 </a>
               </li>
-              <li>
-                <a href="tel:+18005551234" className="hover:text-white transition-colors">
-                  +1 (800) 555-1234
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-emerald-400" />
+                <a href="tel:+17753059399" className="hover:text-white transition-colors">
+                  +1 (775) 305 9399
                 </a>
               </li>
               <li className="pt-4">
                 <Link to="/contact?type=client">
-                  <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-md hover:opacity-90 transition-opacity">
+                  <button className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-6 py-2 rounded-md hover:opacity-90 transition-opacity">
                     Schedule Consultation
                   </button>
                 </Link>
@@ -100,15 +104,46 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm">
+        {/* Global Offices */}
+        <div className="border-t border-slate-800 mt-12 pt-8">
+          <h4 className="text-sm font-semibold text-emerald-400 mb-6 uppercase tracking-wider">Global Offices</h4>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-start gap-3">
+              <MapPin className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
+              <div className="text-sm text-gray-400">
+                <span className="font-semibold text-white">USA</span><br />
+                3225 McLeod Dr. Ste 100<br />
+                Las Vegas, NV 89121
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <MapPin className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />
+              <div className="text-sm text-gray-400">
+                <span className="font-semibold text-white">CANADA</span><br />
+                357 Bay Street<br />
+                Toronto, ON M5H 4A6
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <MapPin className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
+              <div className="text-sm text-gray-400">
+                <span className="font-semibold text-white">INDIA</span><br />
+                C-20, G Block, Bandra Kurla Complex<br />
+                Mumbai, MH 400051
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Infotron Solutions. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
+            <Link to="/privacy" className="text-gray-500 hover:text-emerald-400 transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
+            <Link to="/terms" className="text-gray-500 hover:text-emerald-400 transition-colors">
               Terms of Service
             </Link>
           </div>
