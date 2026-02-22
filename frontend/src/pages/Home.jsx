@@ -412,7 +412,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div 
                 key={testimonial.id} 
@@ -429,17 +429,9 @@ const Home = () => {
                   "{testimonial.quote}"
                 </p>
                 
-                <div className="flex items-center gap-4 pt-6 border-t border-gray-700">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.author}
-                    className="w-14 h-14 rounded-full object-cover ring-2 ring-blue-500/30"
-                  />
-                  <div>
-                    <div className="font-semibold text-white text-lg">{testimonial.author}</div>
-                    <div className="text-sm text-gray-400">{testimonial.title}</div>
-                    <div className="text-sm text-gray-500">{testimonial.company}</div>
-                  </div>
+                <div className="pt-6 border-t border-gray-700">
+                  <div className="font-semibold text-white text-lg">— {testimonial.author}</div>
+                  <div className="text-sm text-gray-400">{testimonial.title}, {testimonial.company}</div>
                 </div>
               </div>
             ))}
