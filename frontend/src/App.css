@@ -452,3 +452,55 @@ button, input, textarea, select {
 ::-webkit-scrollbar-thumb:hover {
     background: #1d4ed8;
 }
+
+
+
+/* CEIPAL Widget Styling for Dark Theme */
+#example-widget-container {
+    background: transparent !important;
+    color: #e5e7eb !important;
+}
+
+#example-widget-container * {
+    font-family: inherit !important;
+}
+
+#example-widget-container .job-listing,
+#example-widget-container .job-card,
+#example-widget-container [class*="job"] {
+    background: rgba(30, 41, 59, 0.5) !important;
+    border: 1px solid rgba(16, 185, 129, 0.2) !important;
+    border-radius: 8px !important;
+    color: #e5e7eb !important;
+    margin-bottom: 1rem !important;
+}
+
+#example-widget-container a {
+    color: #34d399 !important;
+}
+
+#example-widget-container a:hover {
+    color: #6ee7b7 !important;
+}
+
+#example-widget-container input,
+#example-widget-container select {
+    background: rgba(30, 41, 59, 0.8) !important;
+    border: 1px solid rgba(16, 185, 129, 0.3) !important;
+    color: #e5e7eb !important;
+    border-radius: 6px !important;
+    padding: 0.5rem 1rem !important;
+}
+
+#example-widget-container button {
+    background: linear-gradient(to right, #10b981, #06b6d4) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 0.5rem 1.5rem !important;
+    cursor: pointer !important;
+}
+
+#example-widget-container button:hover {
+    opacity: 0.9 !important;
+}
