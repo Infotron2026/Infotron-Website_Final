@@ -296,6 +296,43 @@ a {
     background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.2), rgba(147, 51, 234, 0.2), transparent);
 }
 
+/* Feature Card Styles with Animations */
+.feature-card {
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+/* Scroll fade-in animation for feature cards */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.feature-card.animate-fade-in-up {
+    animation: fadeInScale 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -456,51 +493,133 @@ button, input, textarea, select {
 
 
 /* CEIPAL Widget Styling for Dark Theme */
+.ceipal-wrapper {
+    max-width: 100%;
+}
+
+#ceipal-jobs-container {
+    width: 100%;
+}
+
 #example-widget-container {
     background: transparent !important;
     color: #e5e7eb !important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 #example-widget-container * {
     font-family: inherit !important;
+    box-sizing: border-box !important;
 }
 
 #example-widget-container .job-listing,
 #example-widget-container .job-card,
-#example-widget-container [class*="job"] {
+#example-widget-container [class*="job"],
+#example-widget-container .card,
+#example-widget-container .list-item {
     background: rgba(30, 41, 59, 0.5) !important;
     border: 1px solid rgba(16, 185, 129, 0.2) !important;
-    border-radius: 8px !important;
+    border-radius: 12px !important;
     color: #e5e7eb !important;
     margin-bottom: 1rem !important;
+    padding: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+#example-widget-container .job-listing:hover,
+#example-widget-container .job-card:hover,
+#example-widget-container [class*="job"]:hover {
+    border-color: rgba(16, 185, 129, 0.4) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15) !important;
 }
 
 #example-widget-container a {
     color: #34d399 !important;
+    transition: color 0.2s ease !important;
 }
 
 #example-widget-container a:hover {
     color: #6ee7b7 !important;
 }
 
+#example-widget-container h1,
+#example-widget-container h2,
+#example-widget-container h3,
+#example-widget-container h4,
+#example-widget-container h5,
+#example-widget-container h6 {
+    color: #ffffff !important;
+}
+
+#example-widget-container p,
+#example-widget-container span,
+#example-widget-container div {
+    color: #d1d5db !important;
+}
+
 #example-widget-container input,
-#example-widget-container select {
+#example-widget-container select,
+#example-widget-container textarea {
     background: rgba(30, 41, 59, 0.8) !important;
     border: 1px solid rgba(16, 185, 129, 0.3) !important;
     color: #e5e7eb !important;
-    border-radius: 6px !important;
-    padding: 0.5rem 1rem !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
-#example-widget-container button {
+#example-widget-container input:focus,
+#example-widget-container select:focus,
+#example-widget-container textarea:focus {
+    border-color: rgba(16, 185, 129, 0.6) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2) !important;
+}
+
+#example-widget-container button,
+#example-widget-container .btn,
+#example-widget-container [type="submit"] {
     background: linear-gradient(to right, #10b981, #06b6d4) !important;
     color: white !important;
     border: none !important;
-    border-radius: 6px !important;
-    padding: 0.5rem 1.5rem !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1.5rem !important;
     cursor: pointer !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
 }
 
-#example-widget-container button:hover {
+#example-widget-container button:hover,
+#example-widget-container .btn:hover,
+#example-widget-container [type="submit"]:hover {
     opacity: 0.9 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+#example-widget-container table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+#example-widget-container th,
+#example-widget-container td {
+    padding: 1rem !important;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.1) !important;
+    text-align: left !important;
+}
+
+#example-widget-container th {
+    color: #10b981 !important;
+    font-weight: 600 !important;
+}
+
+/* Remove any white backgrounds from widget */
+#example-widget-container > div,
+#example-widget-container .container,
+#example-widget-container .wrapper {
+    background: transparent !important;
 }

@@ -95,10 +95,10 @@ const Careers = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
           
-          {/* CEIPAL Widget Container */}
+          {/* CEIPAL Widget Container - Styled to match theme */}
           <div 
             id="ceipal-jobs-container" 
-            className="w-full"
+            className="ceipal-wrapper w-full bg-slate-800/50 rounded-2xl border border-emerald-500/20 p-6 lg:p-8"
             style={{ minHeight: '400px' }}
           >
             <div id="example-widget-container" className="w-full"></div>

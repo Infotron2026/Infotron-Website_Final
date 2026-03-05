@@ -59,30 +59,6 @@ const BusinessConsulting = () => {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="py-20">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">What is Business Consulting?</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Infotron's Business Consulting practice brings executive-level technology leadership to organizations 
-              navigating complex digital transformations, platform modernizations, or strategic technology decisions. 
-              We operate at the intersection of business strategy and technical execution.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Our consultants are former CTOs, VPs of Engineering, and technology executives who have scaled companies 
-              from startup to IPO, led enterprise-wide transformations, and built technology organizations from the ground up. 
-              They bring practical, battle-tested insights — not theoretical frameworks.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Unlike traditional consulting firms, we don't just deliver PowerPoint decks. We roll up our sleeves and 
-              help execute — providing hands-on technical leadership, implementation oversight, and team development 
-              alongside strategic guidance.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Key Benefits */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">

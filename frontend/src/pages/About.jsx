@@ -46,13 +46,13 @@ const About = () => {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Infotron Solutions was founded in 2009 with a simple mission: deliver technology solutions 
+                Infotron Solutions was founded in 2021 with a simple mission: deliver technology solutions 
                 with the speed and quality that enterprise organizations deserve. We started as a small team 
                 of senior engineers frustrated with the gap between what clients needed and what traditional 
                 consulting firms delivered.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Over 15 years, we've grown into a global technology partner serving Fortune 500 companies, 
+                In just a few years, we've grown into a global technology partner serving Fortune 500 companies, 
                 high-growth SaaS platforms, hedge funds, and private equity-backed firms. We've delivered 
                 500+ complex technology projects, from algorithmic trading systems to enterprise-wide digital 
                 transformations.
@@ -125,21 +125,72 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership/Culture - Simplified */}
+      {/* Leadership/Culture - Enhanced with Images */}
       <section className="py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Culture</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
               Infotron is built by technologists, for technologists. We hire senior professionals who 
               value craftsmanship, continuous learning, and delivering work they're proud of. Our teams 
               operate with autonomy, ownership, and a bias toward action.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-10">
+            <p className="text-lg text-gray-600 leading-relaxed">
               We're distributed across the Americas, EMEA, and APAC, but united by a shared commitment to 
               technical excellence and client success. If you're a builder who wants to work on complex, 
               high-impact projects with world-class teams, Infotron is your home.
             </p>
+          </div>
+
+          {/* Diverse Team Images Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <div className="relative rounded-xl overflow-hidden h-64 shadow-lg group">
+              <img 
+                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                alt="Diverse team collaboration" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 text-white">
+                <div className="font-semibold">Team Collaboration</div>
+              </div>
+            </div>
+            <div className="relative rounded-xl overflow-hidden h-64 shadow-lg group">
+              <img 
+                src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                alt="Inclusive workplace meeting" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 text-white">
+                <div className="font-semibold">Inclusive Workspace</div>
+              </div>
+            </div>
+            <div className="relative rounded-xl overflow-hidden h-64 shadow-lg group">
+              <img 
+                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                alt="Women in tech leadership" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 text-white">
+                <div className="font-semibold">Leadership</div>
+              </div>
+            </div>
+            <div className="relative rounded-xl overflow-hidden h-64 shadow-lg group">
+              <img 
+                src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
+                alt="Global diverse workforce" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+              <div className="absolute bottom-4 left-4 text-white">
+                <div className="font-semibold">Global Workforce</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
             <Link to="/careers">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90 text-lg px-8 py-6">
                 Join Our Team

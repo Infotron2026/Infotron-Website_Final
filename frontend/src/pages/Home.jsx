@@ -185,7 +185,8 @@ const Home = () => {
           </div>
 
           {/* Services Grid - BOLD GRAPHIC LAYOUT */}
-          <div className="grid lg:grid-cols-3 gap-0">
+          <div className="flex justify-center">
+            <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-[1400px]">
             {services.map((service, index) => {
               const IconComponent = service.icon === 'Server' ? Server : service.icon === 'Users' ? Users : Briefcase;
               const gradients = [
@@ -198,10 +199,7 @@ const Home = () => {
                 <Link
                   key={service.id}
                   to={service.href}
-                  className={`group relative bg-gradient-to-br ${gradients[index]} p-12 lg:p-16 hover:scale-[1.02] transition-all duration-500 scroll-reveal delay-${index * 200 + 200}`}
-                  style={{
-                    clipPath: index === 1 ? 'polygon(0 5%, 100% 0, 100% 95%, 0 100%)' : 'none'
-                  }}
+                  className={`feature-card group relative bg-gradient-to-br ${gradients[index]} p-10 lg:p-14 rounded-2xl hover:scale-[1.03] hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 scroll-reveal delay-${index * 200 + 200}`}
                 >
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-10">
@@ -241,10 +239,11 @@ const Home = () => {
                   </div>
 
                   {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/0 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
                 </Link>
               );
             })}
+            </div>
           </div>
         </div>
       </section>
@@ -253,14 +252,14 @@ const Home = () => {
       <section className="py-32 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 relative overflow-hidden">
         <div className="absolute inset-0 geometric-pattern opacity-30" />
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
-          <div className="text-center mb-20 scroll-reveal">
-            <div className="inline-block mb-4">
-              <span className="text-blue-600 font-semibold text-sm tracking-wider uppercase">Why Infotron</span>
+          <div className="text-center mb-24 scroll-reveal">
+            <div className="inline-block mb-6">
+              <span className="text-blue-600 font-bold text-sm tracking-[0.2em] uppercase">Why Infotron</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Why CTOs Choose Infotron
+            <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-8 tracking-tight">
+              WHY INFOTRON?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
               Not another staffing firm. A delivery partner with skin in the game.
             </p>
           </div>

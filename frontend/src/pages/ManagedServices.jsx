@@ -59,29 +59,6 @@ const ManagedServices = () => {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="py-20">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">What is Managed Services?</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Managed Services from Infotron means outsourcing entire technology functions or projects to a dedicated, 
-              high-performance team that operates with full accountability for delivery. Unlike traditional staff augmentation, 
-              we take ownership of outcomes — not just effort.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Our managed teams integrate seamlessly with your organization, bringing deep technical expertise, 
-              proven methodologies, and a relentless focus on execution. We build, manage, and optimize technology 
-              systems so your internal teams can focus on core business priorities.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Whether you need to modernize legacy infrastructure, scale a SaaS platform, or build mission-critical 
-              systems from scratch, Infotron's Managed Services deliver speed, quality, and measurable ROI.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Key Benefits */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">

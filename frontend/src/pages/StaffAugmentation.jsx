@@ -59,29 +59,6 @@ const StaffAugmentation = () => {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="py-20">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">What is Staff Augmentation?</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Staff Augmentation from Infotron is not traditional contractor placement. We provide elite technology 
-              professionals who become integral members of your existing teams, bringing specialized skills while 
-              adapting to your culture, processes, and standards.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Our talent pool includes senior engineers, architects, data scientists, DevOps specialists, and technical 
-              leaders who have delivered for Fortune 500 companies and high-growth startups. Every candidate is 
-              rigorously vetted for technical excellence, communication skills, and cultural compatibility.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Whether you need a React specialist for 3 months or a full data engineering team for 2 years, 
-              Infotron delivers professionals who hit the ground running and drive immediate value.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Key Benefits */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
