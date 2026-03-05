@@ -13,13 +13,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-emerald-500/20 shadow-lg">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between py-1">
-          {/* Logo - fills available header height */}
+        <div className="flex items-center justify-between py-2">
+          {/* Logo - proportionally scaled to fit header */}
           <Link to="/" className="flex items-center">
             <img 
-              src="https://customer-assets.emergentagent.com/job_9e7beba8-14e2-44de-8374-3ab1c3cccef8/artifacts/hgqw9370_Logo%20white%20no%20background.png" 
+              src="https://customer-assets.emergentagent.com/job_d8f46f0b-1d63-4dfd-8604-cd7ea5aab6e2/artifacts/6cklrdnr_Logo%20white%20no%20background.png" 
               alt="Infotron Solutions" 
-              className="h-[120px] lg:h-[160px] w-auto py-1"
+              className="h-12 lg:h-14 w-auto object-contain"
             />
           </Link>
 
