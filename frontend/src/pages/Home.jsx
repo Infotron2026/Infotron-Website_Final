@@ -252,14 +252,13 @@ const Home = () => {
       <section className="py-32 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30 relative overflow-hidden">
         <div className="absolute inset-0 geometric-pattern opacity-30" />
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
-          <div className="text-center mb-24 scroll-reveal">
-            <div className="inline-block mb-6">
-              <span className="text-blue-600 font-bold text-sm tracking-[0.2em] uppercase">Why Infotron</span>
-            </div>
-            <h2 className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-8 tracking-tight">
-              WHY INFOTRON?
+          <div className="text-center mb-20 scroll-reveal">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Why Infotron?
+              </span>
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Not another staffing firm. A delivery partner with skin in the game.
             </p>
           </div>
