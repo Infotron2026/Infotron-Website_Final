@@ -43,11 +43,11 @@ const BusinessConsulting = () => {
 
   const benefits = [
     { text: 'C-level strategic advisory from experienced technology executives', icon: Briefcase },
-    { text: 'Vendor-agnostic recommendations based purely on business needs', icon: Target },
-    { text: 'Accelerated decision-making with data-driven insights', icon: LineChart },
+    { text: 'AI strategy development and machine learning roadmaps', icon: Target },
+    { text: 'Data-driven insights powered by intelligent analytics', icon: LineChart },
     { text: 'Risk mitigation through proven transformation methodologies', icon: CheckCircle },
     { text: 'Implementation support beyond advisory — we help execute', icon: TrendingUp },
-    { text: 'Knowledge transfer to build internal capabilities', icon: Lightbulb }
+    { text: 'Knowledge transfer to build internal AI/ML capabilities', icon: Lightbulb }
   ];
 
   return (
@@ -79,7 +79,7 @@ const BusinessConsulting = () => {
             <div className="scroll-reveal delay-200">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1621062089461-01f1eaebb66c?w=800&h=600&fit=crop&auto=format"
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop&auto=format"
                   alt="Executive Strategy Session"
                   className="rounded-2xl shadow-2xl border border-emerald-500/20"
                 />

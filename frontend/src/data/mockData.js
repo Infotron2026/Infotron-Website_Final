@@ -27,21 +27,21 @@ export const services = [
   {
     id: "managed-services",
     title: "Managed Services",
-    shortDesc: "We own the delivery. You own the outcome. Full-stack teams that ship on time.",
+    shortDesc: "AI-driven delivery teams that ship on time. Intelligent automation built in.",
     icon: "Server",
     href: "/services/managed-services"
   },
   {
     id: "staff-augmentation",
     title: "Staff Augmentation",
-    shortDesc: "Senior engineers who deploy in weeks, not months. No ramp-up. Immediate impact.",
+    shortDesc: "Senior engineers including AI/ML specialists. Deploy in weeks, not months.",
     icon: "Users",
     href: "/services/staff-augmentation"
   },
   {
     id: "business-consulting",
     title: "Business Consulting",
-    shortDesc: "Former CTOs and VPs of Engineering. Strategic execution, not PowerPoint decks.",
+    shortDesc: "AI strategy and transformation leadership. Execution, not PowerPoint decks.",
     icon: "Briefcase",
     href: "/services/business-consulting"
   }
@@ -59,13 +59,13 @@ export const whyInfotron = [
     icon: "Target"
   },
   {
-    title: "Top 5% Only",
-    description: "We reject 95% of applicants. You get engineers who've scaled $100M+ platforms.",
+    title: "AI-Enhanced Delivery",
+    description: "ML-powered workflows, intelligent automation, and data-driven optimization built in.",
     icon: "Award"
   },
   {
     title: "Domain Expertise",
-    description: "FinTech. Trading systems. Enterprise SaaS. Healthcare. We've built them all.",
+    description: "FinTech. Trading systems. Enterprise SaaS. AI/ML platforms. We've built them all.",
     icon: "TrendingUp"
   },
   {

@@ -33,21 +33,21 @@ const ManagedServices = () => {
   }, []);
 
   const methodology = [
-    { step: 1, title: 'Discovery & Assessment', description: 'Deep-dive analysis of current state, pain points, and strategic objectives', icon: BarChart },
-    { step: 2, title: 'Architecture & Planning', description: 'Solution design, technology selection, and delivery roadmap creation', icon: Layers },
-    { step: 3, title: 'Team Assembly', description: 'Rapid deployment of specialized talent matched to your requirements', icon: Server },
-    { step: 4, title: 'Execution & Delivery', description: 'Agile implementation with weekly milestones and transparent reporting', icon: Rocket },
-    { step: 5, title: 'Operations & Support', description: 'Ongoing management, monitoring, and continuous optimization', icon: Settings },
-    { step: 6, title: 'Scale & Evolution', description: 'Adaptive scaling and technology evolution as your business grows', icon: Shield }
+    { step: 1, title: 'Discovery & Assessment', description: 'Deep-dive analysis leveraging AI-powered diagnostics to identify opportunities', icon: BarChart },
+    { step: 2, title: 'Architecture & Planning', description: 'Solution design including AI/ML integration and intelligent automation roadmaps', icon: Layers },
+    { step: 3, title: 'Team Assembly', description: 'Rapid deployment of specialized talent including data scientists and ML engineers', icon: Server },
+    { step: 4, title: 'Execution & Delivery', description: 'Agile implementation with AI-assisted workflows and transparent reporting', icon: Rocket },
+    { step: 5, title: 'Operations & Support', description: 'Intelligent monitoring, predictive maintenance, and continuous optimization', icon: Settings },
+    { step: 6, title: 'Scale & Evolution', description: 'Adaptive scaling with machine learning-driven performance optimization', icon: Shield }
   ];
 
   const benefits = [
     { text: 'Full accountability for technology outcomes and business impact', icon: CheckCircle },
-    { text: 'Dedicated teams operating as an extension of your organization', icon: Server },
+    { text: 'AI-driven automation and intelligent process optimization', icon: Server },
     { text: 'Faster time-to-market with experienced delivery leadership', icon: Rocket },
     { text: 'Cost predictability with fixed monthly engagement models', icon: BarChart },
-    { text: 'Access to specialized skills across modern technology stacks', icon: Layers },
-    { text: 'Reduced operational risk and improved system reliability', icon: Shield }
+    { text: 'Access to specialized skills including ML/AI engineering', icon: Layers },
+    { text: 'Reduced operational risk with intelligent monitoring systems', icon: Shield }
   ];
 
   return (

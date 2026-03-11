@@ -43,9 +43,9 @@ const StaffAugmentation = () => {
 
   const benefits = [
     { text: 'Deploy specialized talent in 2-3 weeks, not months', icon: Clock },
-    { text: 'Access top 5% global technology professionals', icon: Award },
+    { text: 'Access top 5% global technology professionals including AI/ML specialists', icon: Award },
     { text: 'Flexible scaling up or down based on project needs', icon: Zap },
-    { text: 'Reduce recruitment costs and hiring risks', icon: Shield },
+    { text: 'AI-assisted candidate matching for optimal team fit', icon: Shield },
     { text: 'Immediate productivity with experienced professionals', icon: Target },
     { text: 'Full technical and cultural fit guarantee', icon: CheckCircle }
   ];
