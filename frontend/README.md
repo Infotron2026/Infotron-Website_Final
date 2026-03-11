@@ -1,70 +1,236 @@
-# Getting Started with Create React App
+# Infotron Solutions Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A premium, modern website for Infotron Solutions - an IT Services & Talent Solutions firm.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- **Frontend**: React 18 with Create React App
+- **Styling**: TailwindCSS 3.x
+- **UI Components**: Shadcn/UI
+- **Build Tool**: Craco (Create React App Configuration Override)
+- **Routing**: React Router DOM v6
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+frontend/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── ui/              # Shadcn UI components
+│   │   ├── Header.jsx
+│   │   ├── Footer.jsx
+│   │   └── ScrollToTop.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Careers.jsx
+│   │   ├── Resources.jsx
+│   │   ├── StaffAugmentation.jsx
+│   │   ├── ManagedServices.jsx
+│   │   ├── BusinessConsulting.jsx
+│   │   ├── PrivacyPolicy.jsx
+│   │   └── TermsOfService.jsx
+│   ├── data/
+│   │   └── mockData.js      # Static content data
+│   ├── lib/
+│   │   └── utils.js
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+├── package.json
+├── craco.config.js
+├── tailwind.config.js
+├── jsconfig.json
+└── README.md
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+- Node.js 18.x or higher
+- npm or yarn package manager
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. **Clone or extract the project**
+   ```bash
+   cd frontend
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Set up environment variables**
+   
+   Create a `.env` file in the frontend directory:
+   ```env
+   REACT_APP_BACKEND_URL=https://your-domain.com
+   ```
+   
+   For local development:
+   ```env
+   REACT_APP_BACKEND_URL=http://localhost:3000
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Development
 
-### `npm run eject`
+Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+# or
+yarn start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app will run at `http://localhost:3000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Production Build
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create an optimized production build:
 
-## Learn More
+```bash
+npm run build
+# or
+yarn build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The build output will be in the `build/` directory.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment Options
 
-### Code Splitting
+### Option 1: Static Hosting (Recommended)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The built files can be deployed to any static hosting service:
 
-### Analyzing the Bundle Size
+- **Vercel**: `vercel deploy`
+- **Netlify**: Drag and drop the `build` folder
+- **AWS S3 + CloudFront**: Upload `build` folder to S3
+- **GitHub Pages**: Use `gh-pages` package
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Option 2: Docker
 
-### Making a Progressive Web App
+Create a `Dockerfile`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```dockerfile
+FROM node:18-alpine as build
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
 
-### Advanced Configuration
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Create `nginx.conf` for SPA routing:
 
-### Deployment
+```nginx
+server {
+    listen 80;
+    server_name localhost;
+    root /usr/share/nginx/html;
+    index index.html;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
 
-### `npm run build` fails to minify
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Build and run:
+
+```bash
+docker build -t infotron-website .
+docker run -p 80:80 infotron-website
+```
+
+### Option 3: Node.js Server
+
+Install `serve` globally:
+
+```bash
+npm install -g serve
+```
+
+Serve the build:
+
+```bash
+serve -s build -l 3000
+```
+
+## Third-Party Integrations
+
+### CEIPAL Job Listings
+
+The Careers page integrates with CEIPAL for live job listings. The widget is configured in `src/pages/Careers.jsx`. To update:
+
+1. Get your CEIPAL Portal ID and API key
+2. Update the script in Careers.jsx:
+   ```javascript
+   window.CeipalJobsWidgetConfig = {
+     PortalId: "YOUR_PORTAL_ID",
+     ApiKey: "YOUR_API_KEY"
+   };
+   ```
+
+### Contact Form (Future: HubSpot)
+
+The contact form is ready for HubSpot integration. To enable:
+
+1. Create a HubSpot form
+2. Update `src/pages/Contact.jsx` with your HubSpot form ID
+3. Add the HubSpot tracking script to `public/index.html`
+
+## Customization
+
+### Updating Content
+
+Most static content is in `src/data/mockData.js`:
+- Services descriptions
+- Company stats
+- Case studies
+- Blog posts
+- Testimonials
+
+### Updating Styles
+
+- Global styles: `src/App.css`
+- Tailwind config: `tailwind.config.js`
+- Component styles: Individual component files
+
+### Updating Logo
+
+Replace the logo URL in:
+- `src/components/Header.jsx`
+- `src/components/Footer.jsx`
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## License
+
+Proprietary - Infotron Solutions
+
+## Support
+
+For technical support, contact: contact@infotronsolutions.com
