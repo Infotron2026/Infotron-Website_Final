@@ -3,14 +3,17 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Loader2 } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
+
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mrerqvrb';
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
   const { toast } = useToast();
   
   const [formType, setFormType] = useState('client');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,39 +39,80 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (formType === 'client') {
-      // Client Enquiry - mailto
-      const subject = encodeURIComponent('Infotron Website Enquiry');
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\n` +
-        `Email: ${formData.email}\n` +
-        `Company: ${formData.company}\n` +
-        `Phone: ${formData.phone}\n` +
-        `Service Interest: ${formData.service || 'Not specified'}\n\n` +
-        `Message:\n${formData.message}`
-      );
-      window.location.href = `mailto:contact@infotronsolutions.com?subject=${subject}&body=${body}`;
-    } else {
-      // Candidate Application - mailto
-      const subject = encodeURIComponent('Job Application – Infotron Solutions');
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\n` +
-        `Email: ${formData.email}\n` +
-        `Phone: ${formData.phone}\n` +
-        `LinkedIn: ${formData.linkedin || 'Not provided'}\n` +
-        `Job Title / Job ID: ${formData.jobId || 'General Application'}\n\n` +
-        `Message:\n${formData.message}`
-      );
-      window.location.href = `mailto:contact@infotronsolutions.com?subject=${subject}&body=${body}`;
-    }
+    // Prevent multiple submissions
+    if (isSubmitting) return;
     
-    toast({
-      title: "Opening email client...",
-      description: "Your email client should open with the pre-filled message.",
-    });
+    setIsSubmitting(true);
+    
+    try {
+      // Prepare form data for Formspree
+      const submissionData = formType === 'client' 
+        ? {
+            _subject: 'Infotron Website Enquiry',
+            form_type: 'Client Enquiry',
+            name: formData.name,
+            email: formData.email,
+            company: formData.company,
+            phone: formData.phone,
+            service_interest: formData.service || 'Not specified',
+            message: formData.message
+          }
+        : {
+            _subject: 'Job Application – Infotron Solutions',
+            form_type: 'Candidate Application',
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            linkedin: formData.linkedin || 'Not provided',
+            job_title_or_id: formData.jobId || 'General Application',
+            message: formData.message
+          };
+
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(submissionData)
+      });
+
+      if (response.ok) {
+        // Success
+        toast({
+          title: "Success!",
+          description: formType === 'client' 
+            ? "Your enquiry has been submitted successfully."
+            : "Your application has been submitted successfully.",
+        });
+        
+        // Clear form fields
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          linkedin: '',
+          service: formData.service, // Keep service selection
+          jobId: formData.jobId, // Keep job ID if present
+          message: ''
+        });
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Submission Error",
+        description: "There was an error submitting your form. Please try again or email us directly at contact@infotronsolutions.com",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -352,10 +396,20 @@ const Contact = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-gradient-to-r from-blue-600 to-violet-500 text-white hover:opacity-90 text-lg py-6"
+                disabled={isSubmitting}
+                className="w-full bg-[#3B82F6] hover:bg-[#1E3A8A] text-white text-lg py-6 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <Send className="mr-2 w-5 h-5" />
-                {formType === 'client' ? 'Submit Inquiry' : 'Submit Application'}
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+                    Submitting...
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2 w-5 h-5" />
+                    {formType === 'client' ? 'Submit Inquiry' : 'Submit Application'}
+                  </>
+                )}
               </Button>
 
               <p className="text-sm text-gray-500 text-center">
