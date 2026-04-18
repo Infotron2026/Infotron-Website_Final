@@ -16,6 +16,7 @@ const Contact = () => {
     email: '',
     company: '',
     phone: '',
+    linkedin: '',
     service: '',
     jobId: '',
     message: ''
@@ -38,25 +39,35 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Mock form submission - ready for HubSpot integration
-    console.log('Form submitted:', { type: formType, data: formData });
+    if (formType === 'client') {
+      // Client Enquiry - mailto
+      const subject = encodeURIComponent('Infotron Website Enquiry');
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Company: ${formData.company}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Service Interest: ${formData.service || 'Not specified'}\n\n` +
+        `Message:\n${formData.message}`
+      );
+      window.location.href = `mailto:contact@infotronsolutions.com?subject=${subject}&body=${body}`;
+    } else {
+      // Candidate Application - mailto
+      const subject = encodeURIComponent('Job Application – Infotron Solutions');
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `LinkedIn: ${formData.linkedin || 'Not provided'}\n` +
+        `Job Title / Job ID: ${formData.jobId || 'General Application'}\n\n` +
+        `Message:\n${formData.message}`
+      );
+      window.location.href = `mailto:contact@infotronsolutions.com?subject=${subject}&body=${body}`;
+    }
     
     toast({
-      title: "Thank you for reaching out!",
-      description: formType === 'client' 
-        ? "Our team will contact you within 1 business day to discuss your requirements."
-        : "We've received your application and will review it within 2-3 business days.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      service: formData.service,
-      jobId: formData.jobId,
-      message: ''
+      title: "Opening email client...",
+      description: "Your email client should open with the pre-filled message.",
     });
   };
 
@@ -211,56 +222,71 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Company (Client) / Phone (Candidate) */}
+              {/* Company (Client) / Phone + LinkedIn (Candidate) */}
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-semibold text-gray-300 mb-2">
-                    {formType === 'client' ? 'Company Name *' : 'Phone Number'}
-                  </label>
-                  <Input
-                    id="company"
-                    name="company"
-                    type="text"
-                    required={formType === 'client'}
-                    value={formData.company}
-                    onChange={handleChange}
-                    placeholder={formType === 'client' ? 'Acme Corporation' : '+1 (555) 123-4567'}
-                    className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
-                  />
-                </div>
-
-                {formType === 'client' && (
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-300 mb-2">
-                      Phone Number
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="+1 (555) 123-4567"
-                      className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
-                    />
-                  </div>
-                )}
-
-                {formType === 'candidate' && (
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-300 mb-2">
-                      LinkedIn Profile
-                    </label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="url"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="https://linkedin.com/in/yourprofile"
-                      className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
-                    />
-                  </div>
+                {formType === 'client' ? (
+                  <>
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-semibold text-gray-300 mb-2">
+                        Company Name *
+                      </label>
+                      <Input
+                        id="company"
+                        name="company"
+                        type="text"
+                        required
+                        value={formData.company}
+                        onChange={handleChange}
+                        placeholder="Acme Corporation"
+                        className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-semibold text-gray-300 mb-2">
+                        Phone Number
+                      </label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+1 (555) 123-4567"
+                        className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-semibold text-gray-300 mb-2">
+                        Phone Number
+                      </label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+1 (555) 123-4567"
+                        className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="linkedin" className="block text-sm font-semibold text-gray-300 mb-2">
+                        LinkedIn Profile
+                      </label>
+                      <Input
+                        id="linkedin"
+                        name="linkedin"
+                        type="url"
+                        value={formData.linkedin}
+                        onChange={handleChange}
+                        placeholder="https://linkedin.com/in/yourprofile"
+                        className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
+                      />
+                    </div>
+                  </>
                 )}
               </div>
 
@@ -286,14 +312,20 @@ const Contact = () => {
                 </div>
               )}
 
-              {formType === 'candidate' && formData.jobId && (
+              {formType === 'candidate' && (
                 <div>
-                  <label className="block text-sm font-semibold text-gray-300 mb-2">
-                    Applying for
+                  <label htmlFor="jobId" className="block text-sm font-semibold text-gray-300 mb-2">
+                    Job Title / Job ID
                   </label>
-                  <div className="bg-blue-600/10 border border-[#3B82F6]/30 rounded-md p-3 text-blue-500">
-                    Job ID: {formData.jobId}
-                  </div>
+                  <Input
+                    id="jobId"
+                    name="jobId"
+                    type="text"
+                    value={formData.jobId}
+                    onChange={handleChange}
+                    placeholder="e.g., Senior React Developer or Job ID"
+                    className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
+                  />
                 </div>
               )}
 

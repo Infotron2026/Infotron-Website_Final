@@ -107,17 +107,17 @@ const Careers = () => {
       </section>
 
       {/* General Application */}
-      <section className="py-20 bg-gradient-to-r from-blue-700 to-violet-600">
+      <section className="py-20" style={{background: 'linear-gradient(135deg, #0A192F 0%, #1E3A8A 40%, #3B82F6 75%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Don't See the Right Role?
           </h2>
-          <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             We're always looking for exceptional talent. Submit your profile and we'll reach out 
             when opportunities matching your skills become available.
           </p>
           <Link to="/contact?type=candidate">
-            <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100 text-lg px-8 py-6">
+            <Button size="lg" className="bg-white text-[#3B82F6] hover:bg-gray-100 text-lg px-8 py-6">
               Submit General Application
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
