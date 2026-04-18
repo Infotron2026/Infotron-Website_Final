@@ -61,9 +61,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 pt-20">
+    <div className="min-h-screen bg-[#0A192F] pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
+      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0A192F 0%, #1E3A8A 40%, #3B82F6 75%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-8">
@@ -83,7 +83,7 @@ const Contact = () => {
           <h2 className="text-2xl font-bold text-white mb-10 text-center">Our Global Offices</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* USA */}
-            <div className="bg-slate-900/50 border border-blue-600/20 rounded-lg p-8">
+            <div className="bg-[#0A192F]/50 border border-[#3B82F6]/20 rounded-lg p-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-blue-500" />
@@ -97,7 +97,7 @@ const Contact = () => {
             </div>
 
             {/* Canada */}
-            <div className="bg-slate-900/50 border border-violet-500/20 rounded-lg p-8">
+            <div className="bg-[#0A192F]/50 border border-violet-500/20 rounded-lg p-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-violet-500/20 rounded-lg flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-violet-400" />
@@ -111,7 +111,7 @@ const Contact = () => {
             </div>
 
             {/* India */}
-            <div className="bg-slate-900/50 border border-blue-600/20 rounded-lg p-8">
+            <div className="bg-[#0A192F]/50 border border-[#3B82F6]/20 rounded-lg p-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-blue-500" />
@@ -140,7 +140,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-[#0A192F]">
         <div className="max-w-[800px] mx-auto px-6 lg:px-12">
           {/* Form Type Toggle */}
           <div className="flex gap-4 mb-10 justify-center">
@@ -150,7 +150,7 @@ const Contact = () => {
               size="lg"
               className={formType === 'client' 
                 ? "px-8 bg-gradient-to-r from-blue-600 to-violet-500 text-white" 
-                : "px-8 border-blue-600/50 text-blue-500 hover:bg-blue-600/10"}
+                : "px-8 border-[#3B82F6]/50 text-blue-500 hover:bg-blue-600/10"}
             >
               I'm a Client
             </Button>
@@ -160,13 +160,13 @@ const Contact = () => {
               size="lg"
               className={formType === 'candidate' 
                 ? "px-8 bg-gradient-to-r from-blue-600 to-violet-500 text-white" 
-                : "px-8 border-blue-600/50 text-blue-500 hover:bg-blue-600/10"}
+                : "px-8 border-[#3B82F6]/50 text-blue-500 hover:bg-blue-600/10"}
             >
               I'm a Candidate
             </Button>
           </div>
 
-          <div className="bg-slate-800/50 border border-blue-600/20 rounded-lg p-10">
+          <div className="bg-[#111827]/50 border border-[#3B82F6]/20 rounded-lg p-10">
             <h2 className="text-3xl font-bold text-white mb-2">
               {formType === 'client' ? 'Client Inquiry Form' : 'Candidate Application Form'}
             </h2>
@@ -190,7 +190,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="John Smith"
-                  className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
+                  className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
                 />
               </div>
 
@@ -207,7 +207,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="john.smith@company.com"
-                  className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
+                  className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
                 />
               </div>
 
@@ -225,7 +225,7 @@ const Contact = () => {
                     value={formData.company}
                     onChange={handleChange}
                     placeholder={formType === 'client' ? 'Acme Corporation' : '+1 (555) 123-4567'}
-                    className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
+                    className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
                   />
                 </div>
 
@@ -241,7 +241,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+1 (555) 123-4567"
-                      className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
+                      className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
                     />
                   </div>
                 )}
@@ -258,7 +258,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="https://linkedin.com/in/yourprofile"
-                      className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
+                      className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
                     />
                   </div>
                 )}
@@ -275,7 +275,7 @@ const Contact = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full h-12 px-3 bg-slate-900/50 border border-slate-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full h-12 px-3 bg-[#0A192F]/50 border border-slate-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                   >
                     <option value="">Select a service...</option>
                     <option value="managed-services">Managed Services</option>
@@ -291,7 +291,7 @@ const Contact = () => {
                   <label className="block text-sm font-semibold text-gray-300 mb-2">
                     Applying for
                   </label>
-                  <div className="bg-blue-600/10 border border-blue-600/30 rounded-md p-3 text-blue-500">
+                  <div className="bg-blue-600/10 border border-[#3B82F6]/30 rounded-md p-3 text-blue-500">
                     Job ID: {formData.jobId}
                   </div>
                 </div>
@@ -312,7 +312,7 @@ const Contact = () => {
                     ? 'Tell us about your project scope, timeline, team size needed, and key requirements...'
                     : 'Tell us about your experience, skills, and what type of opportunities you\'re seeking...'}
                   rows={6}
-                  className="resize-none bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
+                  className="resize-none bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
                 />
               </div>
 

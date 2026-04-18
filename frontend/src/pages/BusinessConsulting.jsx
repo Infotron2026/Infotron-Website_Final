@@ -51,13 +51,13 @@ const BusinessConsulting = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 pt-20">
+    <div className="min-h-screen bg-[#0A192F] pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
+      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0A192F 0%, #1E3A8A 40%, #3B82F6 75%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="scroll-reveal">
-              <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-8">
+              <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-[#3B82F6]/30 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-8">
                 <Briefcase className="w-4 h-4" />
                 Business Consulting
               </div>
@@ -70,7 +70,7 @@ const BusinessConsulting = () => {
                 and high-growth startups.
               </p>
               <Link to="/contact?type=client&service=business-consulting">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6">
+                <Button size="lg" className="bg-[#3B82F6] hover:bg-[#1E3A8A] transition-colors duration-300 text-white text-lg px-8 py-6">
                   Discuss Your Challenge
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -81,7 +81,7 @@ const BusinessConsulting = () => {
                 <img
                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop&auto=format"
                   alt="Executive Strategy Session"
-                  className="rounded-2xl shadow-2xl border border-blue-600/20"
+                  className="rounded-2xl shadow-2xl border border-[#3B82F6]/20"
                 />
                 <div className="absolute -z-10 -top-4 -right-4 w-full h-full bg-gradient-to-br from-blue-700/30 to-violet-600/30 rounded-2xl"></div>
               </div>
@@ -91,7 +91,7 @@ const BusinessConsulting = () => {
       </section>
 
       {/* Key Benefits */}
-      <section className="py-24 bg-slate-800/50">
+      <section className="py-24 bg-[#111827]/50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-4xl font-bold mb-4">
@@ -109,10 +109,10 @@ const BusinessConsulting = () => {
               return (
                 <div 
                   key={index} 
-                  className={`scroll-reveal delay-${index * 100} group bg-slate-800/80 border border-blue-600/20 rounded-2xl p-6 hover:border-blue-600/50 hover:bg-slate-800 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-600/10 transition-all duration-300`}
+                  className={`scroll-reveal delay-${index * 100} group bg-[#111827]/80 border border-[#3B82F6]/20 rounded-2xl p-6 hover:border-[#3B82F6]/50 hover:bg-slate-800 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-600/10 transition-all duration-300`}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600/20 to-violet-500/20 border border-blue-600/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600/20 to-violet-500/20 border border-[#3B82F6]/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="w-6 h-6 text-blue-500" />
                     </div>
                     <p className="text-gray-300 leading-relaxed pt-2">{benefit.text}</p>
@@ -125,7 +125,7 @@ const BusinessConsulting = () => {
       </section>
 
       {/* Methodology */}
-      <section className="py-24 bg-slate-900">
+      <section className="py-24 bg-[#0A192F]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-4xl font-bold mb-4">
@@ -149,14 +149,14 @@ const BusinessConsulting = () => {
                     <div className="hidden lg:block absolute top-12 left-full w-8 h-0.5 bg-gradient-to-r from-blue-600/50 to-transparent z-0" />
                   )}
                   
-                  <div className="bg-slate-800/50 border border-blue-600/20 rounded-2xl p-8 h-full hover:border-blue-600/50 hover:bg-slate-800/80 transition-all duration-300 relative">
+                  <div className="bg-[#111827]/50 border border-[#3B82F6]/20 rounded-2xl p-8 h-full hover:border-[#3B82F6]/50 hover:bg-[#111827]/80 transition-all duration-300 relative">
                     {/* Step number badge */}
                     <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-blue-600 to-violet-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-600/30">
                       {item.step}
                     </div>
                     
                     {/* Icon */}
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-600/20 to-violet-500/20 border border-blue-600/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-600/20 to-violet-500/20 border border-[#3B82F6]/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="w-7 h-7 text-blue-500" />
                     </div>
                     
@@ -178,7 +178,7 @@ const BusinessConsulting = () => {
               Success Story
             </span>
           </h2>
-          <div className="scroll-reveal delay-200 bg-slate-800/80 border border-blue-600/20 rounded-2xl overflow-hidden">
+          <div className="scroll-reveal delay-200 bg-[#111827]/80 border border-[#3B82F6]/20 rounded-2xl overflow-hidden">
             <div className="grid lg:grid-cols-2">
               <div className="p-12">
                 <div className="inline-block px-3 py-1 bg-blue-600/20 text-blue-400 text-sm font-semibold rounded-full mb-4">HEDGE FUND</div>
@@ -239,7 +239,7 @@ const BusinessConsulting = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
+      <section className="py-24" style={{background: 'linear-gradient(135deg, #0A192F 0%, #1E3A8A 40%, #3B82F6 75%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center scroll-reveal">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Navigate Your Technology Transformation with Confidence

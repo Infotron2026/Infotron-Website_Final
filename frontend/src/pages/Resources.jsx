@@ -35,9 +35,9 @@ const Resources = () => {
   }, [activeTab]);
 
   return (
-    <div className="min-h-screen bg-slate-900 pt-20">
+    <div className="min-h-screen bg-[#0A192F] pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
+      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0A192F 0%, #1E3A8A 40%, #3B82F6 75%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center scroll-reveal">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-8">
@@ -51,7 +51,7 @@ const Resources = () => {
       </section>
 
       {/* Tabs */}
-      <section className="py-8 bg-slate-800/80 border-b border-blue-500/20 sticky top-20 z-40 backdrop-blur-md">
+      <section className="py-8 bg-[#111827]/80 border-b border-[#3B82F6]/20 sticky top-20 z-40 backdrop-blur-md">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex gap-6 justify-center">
             <button
@@ -89,7 +89,7 @@ const Resources = () => {
       </section>
 
       {/* Content Grid */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-[#0A192F]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           {/* All Resources */}
           {activeTab === 'all' && (
@@ -97,7 +97,7 @@ const Resources = () => {
               {/* Featured Case Studies */}
               <div className="mb-20">
                 <h2 className="text-3xl font-bold mb-8 scroll-reveal">
-                  <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#3B82F6] to-[#7C3AED] bg-clip-text text-transparent">
                     Featured Case Studies
                   </span>
                 </h2>
@@ -106,7 +106,7 @@ const Resources = () => {
                     <Link
                       key={study.id}
                       to={`/resources/case-studies/${study.id}`}
-                      className={`scroll-reveal delay-${index * 100} group bg-slate-800/80 border border-blue-500/20 rounded-2xl overflow-hidden hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
+                      className={`scroll-reveal delay-${index * 100} group bg-[#111827]/80 border border-[#3B82F6]/20 rounded-2xl overflow-hidden hover:border-[#3B82F6]/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
                     >
                       <div className="relative overflow-hidden h-64">
                         <img
@@ -138,7 +138,7 @@ const Resources = () => {
               {/* Latest Blog Posts */}
               <div>
                 <h2 className="text-3xl font-bold mb-8 scroll-reveal">
-                  <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#3B82F6] to-[#7C3AED] bg-clip-text text-transparent">
                     Latest Insights
                   </span>
                 </h2>
@@ -147,7 +147,7 @@ const Resources = () => {
                     <Link
                       key={post.id}
                       to={`/resources/blog/${post.slug}`}
-                      className={`scroll-reveal delay-${index * 100} group bg-slate-800/80 border border-blue-500/20 rounded-2xl overflow-hidden hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
+                      className={`scroll-reveal delay-${index * 100} group bg-[#111827]/80 border border-[#3B82F6]/20 rounded-2xl overflow-hidden hover:border-[#3B82F6]/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
                     >
                       <div className="relative overflow-hidden h-48">
                         <img
@@ -193,7 +193,7 @@ const Resources = () => {
                 <Link
                   key={study.id}
                   to={`/resources/case-studies/${study.id}`}
-                  className={`scroll-reveal delay-${index * 100} group bg-slate-800/80 border border-blue-500/20 rounded-2xl overflow-hidden hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
+                  className={`scroll-reveal delay-${index * 100} group bg-[#111827]/80 border border-[#3B82F6]/20 rounded-2xl overflow-hidden hover:border-[#3B82F6]/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
                 >
                   <div className="relative overflow-hidden h-64">
                     <img
@@ -233,7 +233,7 @@ const Resources = () => {
                 <Link
                   key={post.id}
                   to={`/resources/blog/${post.slug}`}
-                  className={`scroll-reveal delay-${index * 100} group bg-slate-800/80 border border-blue-500/20 rounded-2xl overflow-hidden hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
+                  className={`scroll-reveal delay-${index * 100} group bg-[#111827]/80 border border-[#3B82F6]/20 rounded-2xl overflow-hidden hover:border-[#3B82F6]/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
                 >
                   <div className="relative overflow-hidden h-48">
                     <img
@@ -273,7 +273,7 @@ const Resources = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
+      <section className="py-24" style={{background: 'linear-gradient(135deg, #0A192F 0%, #1E3A8A 40%, #3B82F6 75%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center scroll-reveal">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Start Your Success Story?

@@ -27,9 +27,9 @@ const Careers = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-900 pt-20">
+    <div className="min-h-screen bg-[#0A192F] pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
+      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0A192F 0%, #1E3A8A 40%, #3B82F6 75%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-8">
@@ -41,7 +41,7 @@ const Careers = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact?type=candidate">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6">
+                <Button size="lg" className="bg-[#3B82F6] hover:bg-[#1E3A8A] transition-colors duration-300 text-white text-lg px-8 py-6">
                   Submit Your Profile
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -52,11 +52,11 @@ const Careers = () => {
       </section>
 
       {/* Why Work with Infotron */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-[#0A192F]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Join Infotron?</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 border border-blue-600/20 rounded-lg p-8">
+            <div className="bg-[#111827]/50 border border-[#3B82F6]/20 rounded-lg p-8">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🚀</span>
               </div>
@@ -66,7 +66,7 @@ const Careers = () => {
                 billions in transactions, and cutting-edge SaaS applications.
               </p>
             </div>
-            <div className="bg-slate-800/50 border border-violet-500/20 rounded-lg p-8">
+            <div className="bg-[#111827]/50 border border-violet-500/20 rounded-lg p-8">
               <div className="w-12 h-12 bg-violet-500/20 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">💰</span>
               </div>
@@ -76,7 +76,7 @@ const Careers = () => {
                 for rapid career growth based on merit.
               </p>
             </div>
-            <div className="bg-slate-800/50 border border-blue-600/20 rounded-lg p-8">
+            <div className="bg-[#111827]/50 border border-[#3B82F6]/20 rounded-lg p-8">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🌎</span>
               </div>
@@ -98,7 +98,7 @@ const Careers = () => {
           {/* CEIPAL Widget Container - Styled to match theme */}
           <div 
             id="ceipal-jobs-container" 
-            className="ceipal-wrapper w-full bg-slate-800/50 rounded-2xl border border-blue-600/20 p-6 lg:p-8"
+            className="ceipal-wrapper w-full bg-[#111827]/50 rounded-2xl border border-[#3B82F6]/20 p-6 lg:p-8"
             style={{ minHeight: '400px' }}
           >
             <div id="example-widget-container" className="w-full"></div>

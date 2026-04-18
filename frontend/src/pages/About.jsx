@@ -34,9 +34,9 @@ const About = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-900 pt-20">
+    <div className="min-h-screen bg-[#0A192F] pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
+      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0A192F 0%, #1E3A8A 40%, #3B82F6 75%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center scroll-reveal">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-8">
@@ -52,12 +52,12 @@ const About = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-[#111827]/50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {aboutStats.map((stat, index) => (
               <div key={index} className={`scroll-reveal delay-${index * 100} text-center`}>
-                <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent mb-2">
+                <div className="text-5xl font-bold bg-gradient-to-r from-[#3B82F6] to-[#7C3AED] bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
@@ -68,12 +68,12 @@ const About = () => {
       </section>
 
       {/* Story */}
-      <section className="py-24 bg-slate-900">
+      <section className="py-24 bg-[#0A192F]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="scroll-reveal">
               <h2 className="text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#3B82F6] to-[#7C3AED] bg-clip-text text-transparent">
                   Our Story
                 </span>
               </h2>
@@ -99,7 +99,7 @@ const About = () => {
                 <img
                   src="https://images.pexels.com/photos/1367272/pexels-photo-1367272.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                   alt="Infotron Team Collaboration"
-                  className="rounded-2xl shadow-2xl border border-blue-500/20"
+                  className="rounded-2xl shadow-2xl border border-[#3B82F6]/20"
                 />
                 <div className="absolute -z-10 -top-4 -right-4 w-full h-full bg-gradient-to-br from-blue-600/30 to-violet-600/30 rounded-2xl"></div>
               </div>
@@ -109,10 +109,10 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-24 bg-slate-800/50">
+      <section className="py-24 bg-[#111827]/50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12">
-            <div className="scroll-reveal bg-slate-800/80 border border-blue-500/20 rounded-2xl p-12 hover:border-blue-500/40 transition-all duration-300">
+            <div className="scroll-reveal bg-[#111827]/80 border border-[#3B82F6]/20 rounded-2xl p-12 hover:border-[#3B82F6]/40 transition-all duration-300">
               <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
               <p className="text-lg text-gray-300 leading-relaxed">
                 To empower organizations with technology delivery capabilities that accelerate growth, 
@@ -120,7 +120,7 @@ const About = () => {
                 elite talent, and full accountability for outcomes.
               </p>
             </div>
-            <div className="scroll-reveal delay-200 bg-slate-800/80 border border-violet-500/20 rounded-2xl p-12 hover:border-violet-500/40 transition-all duration-300">
+            <div className="scroll-reveal delay-200 bg-[#111827]/80 border border-violet-500/20 rounded-2xl p-12 hover:border-violet-500/40 transition-all duration-300">
               <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
               <p className="text-lg text-gray-300 leading-relaxed">
                 To be the global standard for technology services delivery — recognized as the partner 
@@ -133,11 +133,11 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 bg-slate-900">
+      <section className="py-24 bg-[#0A192F]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#3B82F6] to-[#7C3AED] bg-clip-text text-transparent">
                 Core Values
               </span>
             </h2>
@@ -153,9 +153,9 @@ const About = () => {
               return (
                 <div 
                   key={index} 
-                  className={`scroll-reveal delay-${index * 100} group bg-slate-800/80 border border-blue-500/20 rounded-2xl p-8 hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
+                  className={`scroll-reveal delay-${index * 100} group bg-[#111827]/80 border border-[#3B82F6]/20 rounded-2xl p-8 hover:border-[#3B82F6]/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
                 >
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-[#3B82F6]/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-7 h-7 text-blue-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
@@ -172,7 +172,7 @@ const About = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center mb-16 scroll-reveal">
             <h2 className="text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#3B82F6] to-[#7C3AED] bg-clip-text text-transparent">
                 Our Culture
               </span>
             </h2>
@@ -190,7 +190,7 @@ const About = () => {
 
           {/* Diverse Team Images Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-            <div className="scroll-reveal relative rounded-2xl overflow-hidden h-64 shadow-lg group border border-blue-500/20">
+            <div className="scroll-reveal relative rounded-2xl overflow-hidden h-64 shadow-lg group border border-[#3B82F6]/20">
               <img 
                 src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
                 alt="Diverse team collaboration" 
@@ -212,7 +212,7 @@ const About = () => {
                 <div className="font-semibold">Inclusive Workspace</div>
               </div>
             </div>
-            <div className="scroll-reveal delay-200 relative rounded-2xl overflow-hidden h-64 shadow-lg group border border-blue-500/20">
+            <div className="scroll-reveal delay-200 relative rounded-2xl overflow-hidden h-64 shadow-lg group border border-[#3B82F6]/20">
               <img 
                 src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
                 alt="Women in tech leadership" 
@@ -248,7 +248,7 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
+      <section className="py-24" style={{background: 'linear-gradient(135deg, #0A192F 0%, #1E3A8A 40%, #3B82F6 75%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center scroll-reveal">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Let's Build Something Exceptional Together
