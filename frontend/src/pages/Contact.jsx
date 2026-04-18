@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
-import { Mail, Phone, MapPin, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Loader2, Upload, FileText, X } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mrerqvrb';
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const ALLOWED_FILE_TYPES = ['.pdf', '.doc', '.docx'];
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
   const { toast } = useToast();
+  const fileInputRef = useRef(null);
   
   const [formType, setFormType] = useState('client');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [resumeFile, setResumeFile] = useState(null);
+  const [fileError, setFileError] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,45 +44,92 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setFileError('');
+    
+    if (!file) {
+      setResumeFile(null);
+      return;
+    }
+    
+    // Check file type
+    const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
+    if (!ALLOWED_FILE_TYPES.includes(fileExtension)) {
+      setFileError('Please upload a PDF, DOC, or DOCX file.');
+      setResumeFile(null);
+      e.target.value = '';
+      return;
+    }
+    
+    // Check file size
+    if (file.size > MAX_FILE_SIZE) {
+      setFileError('File size must be less than 5MB.');
+      setResumeFile(null);
+      e.target.value = '';
+      return;
+    }
+    
+    setResumeFile(file);
+  };
+
+  const removeFile = () => {
+    setResumeFile(null);
+    setFileError('');
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     // Prevent multiple submissions
     if (isSubmitting) return;
     
+    // Validate resume for candidate form
+    if (formType === 'candidate' && !resumeFile) {
+      setFileError('Please upload your resume.');
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
-      // Prepare form data for Formspree
-      const submissionData = formType === 'client' 
-        ? {
-            _subject: 'Infotron Website Enquiry',
-            form_type: 'Client Enquiry',
-            name: formData.name,
-            email: formData.email,
-            company: formData.company,
-            phone: formData.phone,
-            service_interest: formData.service || 'Not specified',
-            message: formData.message
-          }
-        : {
-            _subject: 'Job Application – Infotron Solutions',
-            form_type: 'Candidate Application',
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            linkedin: formData.linkedin || 'Not provided',
-            job_title_or_id: formData.jobId || 'General Application',
-            message: formData.message
-          };
+      // Use FormData for file uploads
+      const formDataToSend = new FormData();
+      
+      if (formType === 'client') {
+        formDataToSend.append('_subject', 'Infotron Website Enquiry');
+        formDataToSend.append('form_type', 'Client Enquiry');
+        formDataToSend.append('name', formData.name);
+        formDataToSend.append('email', formData.email);
+        formDataToSend.append('company', formData.company);
+        formDataToSend.append('phone', formData.phone);
+        formDataToSend.append('service_interest', formData.service || 'Not specified');
+        formDataToSend.append('message', formData.message);
+      } else {
+        formDataToSend.append('_subject', 'Job Application – Infotron Solutions');
+        formDataToSend.append('form_type', 'Candidate Application');
+        formDataToSend.append('name', formData.name);
+        formDataToSend.append('email', formData.email);
+        formDataToSend.append('phone', formData.phone);
+        formDataToSend.append('linkedin', formData.linkedin || 'Not provided');
+        formDataToSend.append('job_title_or_id', formData.jobId || 'General Application');
+        formDataToSend.append('message', formData.message);
+        
+        // Append resume file
+        if (resumeFile) {
+          formDataToSend.append('resume', resumeFile);
+        }
+      }
 
       const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
-        body: JSON.stringify(submissionData)
+        body: formDataToSend
       });
 
       if (response.ok) {
@@ -96,10 +148,14 @@ const Contact = () => {
           company: '',
           phone: '',
           linkedin: '',
-          service: formData.service, // Keep service selection
-          jobId: formData.jobId, // Keep job ID if present
+          service: formData.service,
+          jobId: formData.jobId,
           message: ''
         });
+        setResumeFile(null);
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
       } else {
         throw new Error('Submission failed');
       }
@@ -370,6 +426,68 @@ const Contact = () => {
                     placeholder="e.g., Senior React Developer or Job ID"
                     className="h-12 bg-[#0A192F]/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-[#3B82F6]"
                   />
+                </div>
+              )}
+
+              {/* Resume Upload (Candidate Only) */}
+              {formType === 'candidate' && (
+                <div>
+                  <label htmlFor="resume" className="block text-sm font-semibold text-gray-300 mb-2">
+                    Upload Resume (PDF/DOC/DOCX) *
+                  </label>
+                  <div className="relative">
+                    {!resumeFile ? (
+                      <div 
+                        className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer transition-colors duration-300 ${
+                          fileError 
+                            ? 'border-red-500 bg-red-500/10' 
+                            : 'border-slate-700 hover:border-[#3B82F6] bg-[#0A192F]/50'
+                        }`}
+                        onClick={() => fileInputRef.current?.click()}
+                      >
+                        <Upload className="w-8 h-8 mx-auto mb-2 text-gray-400" />
+                        <p className="text-gray-400 text-sm">
+                          Click to upload or drag and drop
+                        </p>
+                        <p className="text-gray-500 text-xs mt-1">
+                          PDF, DOC, DOCX (Max 5MB)
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="flex items-center justify-between bg-[#0A192F]/50 border border-[#3B82F6] rounded-lg p-4">
+                        <div className="flex items-center gap-3">
+                          <FileText className="w-8 h-8 text-[#3B82F6]" />
+                          <div>
+                            <p className="text-white text-sm font-medium truncate max-w-[200px]">
+                              {resumeFile.name}
+                            </p>
+                            <p className="text-gray-500 text-xs">
+                              {(resumeFile.size / 1024 / 1024).toFixed(2)} MB
+                            </p>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={removeFile}
+                          className="p-1 hover:bg-slate-700 rounded-full transition-colors"
+                        >
+                          <X className="w-5 h-5 text-gray-400 hover:text-white" />
+                        </button>
+                      </div>
+                    )}
+                    <input
+                      ref={fileInputRef}
+                      id="resume"
+                      name="resume"
+                      type="file"
+                      accept=".pdf,.doc,.docx"
+                      onChange={handleFileChange}
+                      className="hidden"
+                    />
+                  </div>
+                  {fileError && (
+                    <p className="text-red-500 text-sm mt-2">{fileError}</p>
+                  )}
                 </div>
               )}
 
