@@ -4,7 +4,7 @@ import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-950 text-white border-t border-emerald-500/20">
+    <footer className="bg-slate-950 text-white border-t border-blue-600/20">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
@@ -21,7 +21,7 @@ const Footer = () => {
               href="https://www.linkedin.com/company/infotronsolutions/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
+              className="inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 transition-colors"
             >
               <Linkedin className="w-5 h-5" />
               Follow us on LinkedIn
@@ -30,7 +30,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-emerald-400">Services</h3>
+            <h3 className="font-semibold text-lg mb-4 text-blue-500">Services</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/services/managed-services" className="text-gray-400 hover:text-white transition-colors">
@@ -52,7 +52,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-emerald-400">Company</h3>
+            <h3 className="font-semibold text-lg mb-4 text-blue-500">Company</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
@@ -79,23 +79,23 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-emerald-400">Get in Touch</h3>
+            <h3 className="font-semibold text-lg mb-4 text-blue-500">Get in Touch</h3>
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-emerald-400" />
+                <Mail className="w-4 h-4 text-blue-500" />
                 <a href="mailto:contact@infotronsolutions.com" className="hover:text-white transition-colors">
                   contact@infotronsolutions.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-emerald-400" />
+                <Phone className="w-4 h-4 text-blue-500" />
                 <a href="tel:+17753059399" className="hover:text-white transition-colors">
                   +1 (775) 305 9399
                 </a>
               </li>
               <li className="pt-4">
                 <Link to="/contact?type=client">
-                  <button className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-6 py-2 rounded-md hover:opacity-90 transition-opacity">
+                  <button className="bg-gradient-to-r from-blue-600 to-violet-500 text-white px-6 py-2 rounded-md hover:opacity-90 transition-opacity">
                     Schedule Consultation
                   </button>
                 </Link>
@@ -106,10 +106,10 @@ const Footer = () => {
 
         {/* Global Offices */}
         <div className="border-t border-slate-800 mt-12 pt-8">
-          <h4 className="text-sm font-semibold text-emerald-400 mb-6 uppercase tracking-wider">Global Offices</h4>
+          <h4 className="text-sm font-semibold text-blue-500 mb-6 uppercase tracking-wider">Global Offices</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
+              <MapPin className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0" />
               <div className="text-sm text-gray-400">
                 <span className="font-semibold text-white">USA</span><br />
                 3225 McLeod Dr. Ste 100<br />
@@ -117,7 +117,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />
+              <MapPin className="w-4 h-4 text-violet-400 mt-1 flex-shrink-0" />
               <div className="text-sm text-gray-400">
                 <span className="font-semibold text-white">CANADA</span><br />
                 357 Bay Street<br />
@@ -125,7 +125,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 text-emerald-400 mt-1 flex-shrink-0" />
+              <MapPin className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0" />
               <div className="text-sm text-gray-400">
                 <span className="font-semibold text-white">INDIA</span><br />
                 C-20, G Block, Bandra Kurla Complex<br />
@@ -140,10 +140,10 @@ const Footer = () => {
             © {new Date().getFullYear()} Infotron Solutions. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link to="/privacy" className="text-gray-500 hover:text-emerald-400 transition-colors">
+            <Link to="/privacy" className="text-gray-500 hover:text-blue-500 transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-gray-500 hover:text-emerald-400 transition-colors">
+            <Link to="/terms" className="text-gray-500 hover:text-blue-500 transition-colors">
               Terms of Service
             </Link>
           </div>

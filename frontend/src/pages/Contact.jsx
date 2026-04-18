@@ -63,7 +63,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-slate-900 pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32 bg-gradient-to-br from-slate-900 via-emerald-950 to-cyan-950">
+      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-8">
@@ -83,10 +83,10 @@ const Contact = () => {
           <h2 className="text-2xl font-bold text-white mb-10 text-center">Our Global Offices</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* USA */}
-            <div className="bg-slate-900/50 border border-emerald-500/20 rounded-lg p-8">
+            <div className="bg-slate-900/50 border border-blue-600/20 rounded-lg p-8">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-emerald-400" />
+                <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-blue-500" />
                 </div>
                 <h3 className="font-bold text-white text-lg">USA</h3>
               </div>
@@ -97,10 +97,10 @@ const Contact = () => {
             </div>
 
             {/* Canada */}
-            <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-8">
+            <div className="bg-slate-900/50 border border-violet-500/20 rounded-lg p-8">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-cyan-400" />
+                <div className="w-10 h-10 bg-violet-500/20 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-violet-400" />
                 </div>
                 <h3 className="font-bold text-white text-lg">CANADA</h3>
               </div>
@@ -111,10 +111,10 @@ const Contact = () => {
             </div>
 
             {/* India */}
-            <div className="bg-slate-900/50 border border-emerald-500/20 rounded-lg p-8">
+            <div className="bg-slate-900/50 border border-blue-600/20 rounded-lg p-8">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-emerald-400" />
+                <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-blue-500" />
                 </div>
                 <h3 className="font-bold text-white text-lg">INDIA</h3>
               </div>
@@ -127,11 +127,11 @@ const Contact = () => {
 
           {/* Contact Info */}
           <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8">
-            <a href="tel:+17753059399" className="flex items-center gap-3 text-emerald-400 hover:text-emerald-300 transition-colors">
+            <a href="tel:+17753059399" className="flex items-center gap-3 text-blue-500 hover:text-blue-400 transition-colors">
               <Phone className="w-5 h-5" />
               <span className="text-lg">+1 (775) 305 9399</span>
             </a>
-            <a href="mailto:contact@infotronsolutions.com" className="flex items-center gap-3 text-emerald-400 hover:text-emerald-300 transition-colors">
+            <a href="mailto:contact@infotronsolutions.com" className="flex items-center gap-3 text-blue-500 hover:text-blue-400 transition-colors">
               <Mail className="w-5 h-5" />
               <span className="text-lg">contact@infotronsolutions.com</span>
             </a>
@@ -149,8 +149,8 @@ const Contact = () => {
               onClick={() => setFormType('client')}
               size="lg"
               className={formType === 'client' 
-                ? "px-8 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white" 
-                : "px-8 border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10"}
+                ? "px-8 bg-gradient-to-r from-blue-600 to-violet-500 text-white" 
+                : "px-8 border-blue-600/50 text-blue-500 hover:bg-blue-600/10"}
             >
               I'm a Client
             </Button>
@@ -159,14 +159,14 @@ const Contact = () => {
               onClick={() => setFormType('candidate')}
               size="lg"
               className={formType === 'candidate' 
-                ? "px-8 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white" 
-                : "px-8 border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10"}
+                ? "px-8 bg-gradient-to-r from-blue-600 to-violet-500 text-white" 
+                : "px-8 border-blue-600/50 text-blue-500 hover:bg-blue-600/10"}
             >
               I'm a Candidate
             </Button>
           </div>
 
-          <div className="bg-slate-800/50 border border-emerald-500/20 rounded-lg p-10">
+          <div className="bg-slate-800/50 border border-blue-600/20 rounded-lg p-10">
             <h2 className="text-3xl font-bold text-white mb-2">
               {formType === 'client' ? 'Client Inquiry Form' : 'Candidate Application Form'}
             </h2>
@@ -190,7 +190,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="John Smith"
-                  className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-emerald-500"
+                  className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
                 />
               </div>
 
@@ -207,7 +207,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="john.smith@company.com"
-                  className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-emerald-500"
+                  className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
                 />
               </div>
 
@@ -225,7 +225,7 @@ const Contact = () => {
                     value={formData.company}
                     onChange={handleChange}
                     placeholder={formType === 'client' ? 'Acme Corporation' : '+1 (555) 123-4567'}
-                    className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-emerald-500"
+                    className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
                   />
                 </div>
 
@@ -241,7 +241,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+1 (555) 123-4567"
-                      className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-emerald-500"
+                      className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
                     />
                   </div>
                 )}
@@ -258,7 +258,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="https://linkedin.com/in/yourprofile"
-                      className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-emerald-500"
+                      className="h-12 bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
                     />
                   </div>
                 )}
@@ -275,7 +275,7 @@ const Contact = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full h-12 px-3 bg-slate-900/50 border border-slate-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full h-12 px-3 bg-slate-900/50 border border-slate-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                   >
                     <option value="">Select a service...</option>
                     <option value="managed-services">Managed Services</option>
@@ -291,7 +291,7 @@ const Contact = () => {
                   <label className="block text-sm font-semibold text-gray-300 mb-2">
                     Applying for
                   </label>
-                  <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-md p-3 text-emerald-400">
+                  <div className="bg-blue-600/10 border border-blue-600/30 rounded-md p-3 text-blue-500">
                     Job ID: {formData.jobId}
                   </div>
                 </div>
@@ -312,7 +312,7 @@ const Contact = () => {
                     ? 'Tell us about your project scope, timeline, team size needed, and key requirements...'
                     : 'Tell us about your experience, skills, and what type of opportunities you\'re seeking...'}
                   rows={6}
-                  className="resize-none bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-emerald-500"
+                  className="resize-none bg-slate-900/50 border-slate-700 text-white placeholder:text-gray-500 focus:border-blue-600"
                 />
               </div>
 
@@ -320,7 +320,7 @@ const Contact = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white hover:opacity-90 text-lg py-6"
+                className="w-full bg-gradient-to-r from-blue-600 to-violet-500 text-white hover:opacity-90 text-lg py-6"
               >
                 <Send className="mr-2 w-5 h-5" />
                 {formType === 'client' ? 'Submit Inquiry' : 'Submit Application'}
@@ -328,9 +328,9 @@ const Contact = () => {
 
               <p className="text-sm text-gray-500 text-center">
                 By submitting this form, you agree to our{' '}
-                <Link to="/privacy" className="text-emerald-400 hover:text-emerald-300">Privacy Policy</Link>
+                <Link to="/privacy" className="text-blue-500 hover:text-blue-400">Privacy Policy</Link>
                 {' '}and{' '}
-                <Link to="/terms" className="text-emerald-400 hover:text-emerald-300">Terms of Service</Link>
+                <Link to="/terms" className="text-blue-500 hover:text-blue-400">Terms of Service</Link>
               </p>
             </form>
           </div>
@@ -338,7 +338,7 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-cyan-600">
+      <section className="py-20 bg-gradient-to-r from-blue-700 to-violet-600">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Prefer to Schedule a Call?
@@ -348,13 +348,13 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:contact@infotronsolutions.com">
-              <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
                 <Mail className="mr-2 w-5 h-5" />
                 contact@infotronsolutions.com
               </Button>
             </a>
             <a href="tel:+17753059399">
-              <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
                 <Phone className="mr-2 w-5 h-5" />
                 +1 (775) 305 9399
               </Button>

@@ -37,7 +37,7 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-slate-900 pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
+      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center scroll-reveal">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-8">
@@ -58,7 +58,7 @@ const Resources = () => {
               onClick={() => setActiveTab('all')}
               className={`px-6 py-3 font-semibold text-lg transition-all rounded-lg ${
                 activeTab === 'all'
-                  ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/30'
+                  ? 'text-violet-400 bg-violet-500/10 border border-violet-500/30'
                   : 'text-gray-400 hover:text-white hover:bg-slate-700/50'
               }`}
             >
@@ -68,7 +68,7 @@ const Resources = () => {
               onClick={() => setActiveTab('case-studies')}
               className={`px-6 py-3 font-semibold text-lg transition-all rounded-lg ${
                 activeTab === 'case-studies'
-                  ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/30'
+                  ? 'text-violet-400 bg-violet-500/10 border border-violet-500/30'
                   : 'text-gray-400 hover:text-white hover:bg-slate-700/50'
               }`}
             >
@@ -78,7 +78,7 @@ const Resources = () => {
               onClick={() => setActiveTab('blogs')}
               className={`px-6 py-3 font-semibold text-lg transition-all rounded-lg ${
                 activeTab === 'blogs'
-                  ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/30'
+                  ? 'text-violet-400 bg-violet-500/10 border border-violet-500/30'
                   : 'text-gray-400 hover:text-white hover:bg-slate-700/50'
               }`}
             >
@@ -97,7 +97,7 @@ const Resources = () => {
               {/* Featured Case Studies */}
               <div className="mb-20">
                 <h2 className="text-3xl font-bold mb-8 scroll-reveal">
-                  <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                     Featured Case Studies
                   </span>
                 </h2>
@@ -116,16 +116,16 @@ const Resources = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent" />
                         <div className="absolute bottom-4 left-6 text-white">
-                          <div className="text-sm font-semibold text-cyan-400 mb-1">{study.industry}</div>
+                          <div className="text-sm font-semibold text-violet-400 mb-1">{study.industry}</div>
                           <div className="text-xs text-gray-300">{study.client}</div>
                         </div>
                       </div>
                       <div className="p-8">
-                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-violet-400 transition-colors">
                           {study.title}
                         </h3>
                         <p className="text-gray-400 mb-6">{study.challenge}</p>
-                        <div className="flex items-center text-cyan-400 font-semibold">
+                        <div className="flex items-center text-violet-400 font-semibold">
                           Read Case Study
                           <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </div>
@@ -138,7 +138,7 @@ const Resources = () => {
               {/* Latest Blog Posts */}
               <div>
                 <h2 className="text-3xl font-bold mb-8 scroll-reveal">
-                  <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                     Latest Insights
                   </span>
                 </h2>
@@ -158,7 +158,7 @@ const Resources = () => {
                       </div>
                       <div className="p-6">
                         <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
-                          <span className="inline-flex items-center gap-1 bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold">
+                          <span className="inline-flex items-center gap-1 bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-xs font-semibold">
                             <Tag className="w-3 h-3" />
                             {post.category}
                           </span>
@@ -167,7 +167,7 @@ const Resources = () => {
                             {post.readTime}
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors">
                           {post.title}
                         </h3>
                         <p className="text-gray-400 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
@@ -176,7 +176,7 @@ const Resources = () => {
                             <Calendar className="w-4 h-4" />
                             {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                           </span>
-                          <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                          <ArrowRight className="w-5 h-5 text-violet-400 group-hover:translate-x-1 transition-transform" />
                         </div>
                       </div>
                     </Link>
@@ -203,12 +203,12 @@ const Resources = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent" />
                     <div className="absolute bottom-4 left-6 text-white">
-                      <div className="text-sm font-semibold text-cyan-400 mb-1">{study.industry}</div>
+                      <div className="text-sm font-semibold text-violet-400 mb-1">{study.industry}</div>
                       <div className="text-xs text-gray-300">{study.client}</div>
                     </div>
                   </div>
                   <div className="p-8">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-violet-400 transition-colors">
                       {study.title}
                     </h3>
                     <p className="text-gray-400 mb-6">{study.challenge}</p>
@@ -218,7 +218,7 @@ const Resources = () => {
                         <span>•</span>
                         <span>{study.teamSize}</span>
                       </div>
-                      <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-5 h-5 text-violet-400 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </Link>
@@ -244,7 +244,7 @@ const Resources = () => {
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
-                      <span className="inline-flex items-center gap-1 bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold">
+                      <span className="inline-flex items-center gap-1 bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-xs font-semibold">
                         <Tag className="w-3 h-3" />
                         {post.category}
                       </span>
@@ -253,7 +253,7 @@ const Resources = () => {
                         {post.readTime}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors">
                       {post.title}
                     </h3>
                     <p className="text-gray-400 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
@@ -262,7 +262,7 @@ const Resources = () => {
                         <Calendar className="w-4 h-4" />
                         {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                       </span>
-                      <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-5 h-5 text-violet-400 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </Link>
@@ -273,7 +273,7 @@ const Resources = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
+      <section className="py-24" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center scroll-reveal">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Start Your Success Story?

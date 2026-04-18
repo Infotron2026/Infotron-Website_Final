@@ -39,17 +39,17 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* HERO SECTION - Split Layout */}
-      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-slate-900 via-emerald-950 to-cyan-950">
+      <section className="relative min-h-[90vh] flex items-center" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Text Content */}
             <div className="animate-fade-in-up">
-              <span className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-semibold tracking-wider uppercase mb-8">
+              <span className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 text-xs font-semibold tracking-wider uppercase mb-8">
                 Enterprise Technology Delivery
               </span>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight">
-                <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-500 to-violet-400 bg-clip-text text-transparent">
                   Outcomes.
                 </span>
                 <br />
@@ -67,7 +67,7 @@ const Home = () => {
                 <Link to="/contact?type=client">
                   <Button 
                     size="lg" 
-                    className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white hover:shadow-xl hover:shadow-emerald-500/30 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300 hover:-translate-y-1"
+                    className="bg-gradient-to-r from-blue-600 to-violet-500 text-white hover:shadow-xl hover:shadow-blue-600/30 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300 hover:-translate-y-1"
                   >
                     <span className="flex items-center gap-2">
                       Talk to Our Team
@@ -79,7 +79,7 @@ const Home = () => {
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="border-2 border-emerald-400/50 text-emerald-300 hover:bg-emerald-500/20 hover:border-emerald-400 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
+                    className="border-2 border-blue-500/50 text-blue-400 hover:bg-blue-600/20 hover:border-blue-500 text-base font-semibold px-10 py-7 rounded-lg transition-all duration-300"
                   >
                     View Open Positions
                   </Button>
@@ -89,7 +89,7 @@ const Home = () => {
 
             {/* Right - Image */}
             <div className="relative animate-fade-in">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/20">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-blue-600/20">
                 <img 
                   src="https://images.pexels.com/photos/1181226/pexels-photo-1181226.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                   alt="Diverse women tech professionals collaborating"
@@ -97,7 +97,7 @@ const Home = () => {
                 />
               </div>
               {/* Decorative elements */}
-              <div className="absolute -z-10 -top-6 -right-6 w-full h-full bg-gradient-to-br from-emerald-600/30 to-cyan-600/30 rounded-2xl"></div>
+              <div className="absolute -z-10 -top-6 -right-6 w-full h-full bg-gradient-to-br from-blue-700/30 to-violet-600/30 rounded-2xl"></div>
             </div>
           </div>
         </div>
@@ -107,9 +107,9 @@ const Home = () => {
       <section className="py-24 bg-slate-900">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           {/* Section with subtle gradient background */}
-          <div className="relative bg-slate-800/50 rounded-2xl border border-emerald-500/20 p-12 lg:p-16 shadow-xl backdrop-blur">
+          <div className="relative bg-slate-800/50 rounded-2xl border border-blue-600/20 p-12 lg:p-16 shadow-xl backdrop-blur">
             {/* Subtle gradient accent */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-emerald-500 rounded-t-2xl" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-violet-500 to-blue-600 rounded-t-2xl" />
             
             <div className="text-center mb-10">
               <h2 className="text-4xl lg:text-5xl font-black text-white mb-4 tracking-tight">
@@ -130,8 +130,8 @@ const Home = () => {
             {/* Three Pillars */}
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/30 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl font-black text-emerald-400">B</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600/20 to-blue-700/10 border border-blue-600/30 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl font-black text-blue-500">B</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Build</h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -140,8 +140,8 @@ const Home = () => {
               </div>
 
               <div className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-cyan-600/10 border border-cyan-500/30 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl font-black text-cyan-400">O</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-violet-500/20 to-violet-600/10 border border-violet-500/30 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl font-black text-violet-400">O</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Operate</h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -150,8 +150,8 @@ const Home = () => {
               </div>
 
               <div className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-cyan-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-3xl font-black bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">T</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600/20 to-violet-500/10 border border-blue-600/30 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl font-black bg-gradient-to-r from-blue-500 to-violet-400 bg-clip-text text-transparent">T</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Transfer</h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -173,7 +173,7 @@ const Home = () => {
           {/* Section Header - BOLD */}
           <div className="text-center mb-20 scroll-reveal">
             <div className="inline-block mb-6">
-              <span className="text-emerald-400 font-black text-sm tracking-[0.2em] uppercase">How We Work</span>
+              <span className="text-blue-500 font-black text-sm tracking-[0.2em] uppercase">How We Work</span>
             </div>
             <h2 className="text-5xl lg:text-7xl font-black text-white mb-8 leading-tight">
               Three Engagement<br/>Models. One Goal.
@@ -181,7 +181,7 @@ const Home = () => {
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
               Your results. Our accountability.
             </p>
-            <div className="w-32 h-2 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto rounded-full" />
+            <div className="w-32 h-2 bg-gradient-to-r from-blue-600 to-violet-500 mx-auto rounded-full" />
           </div>
 
           {/* Services Grid - BOLD GRAPHIC LAYOUT */}
@@ -190,16 +190,16 @@ const Home = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon === 'Server' ? Server : service.icon === 'Users' ? Users : Briefcase;
               const gradients = [
-                'from-emerald-600 to-cyan-600',
-                'from-cyan-600 to-teal-600',
-                'from-teal-600 to-emerald-600'
+                'from-[#2563EB] to-[#7C3AED]',
+                'from-[#7C3AED] to-[#2563EB]',
+                'from-[#0B1F3A] to-[#2563EB]'
               ];
               
               return (
                 <Link
                   key={service.id}
                   to={service.href}
-                  className={`feature-card group relative bg-gradient-to-br ${gradients[index]} p-10 lg:p-14 rounded-2xl hover:scale-[1.03] hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 scroll-reveal delay-${index * 200 + 200}`}
+                  className={`feature-card group relative bg-gradient-to-br ${gradients[index]} p-10 lg:p-14 rounded-2xl hover:scale-[1.03] hover:shadow-2xl hover:shadow-blue-600/20 transition-all duration-500 scroll-reveal delay-${index * 200 + 200}`}
                 >
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-10">
@@ -498,7 +498,7 @@ const Home = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-32 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-[length:200%_auto] relative overflow-hidden">
+      <section className="py-32 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]" />

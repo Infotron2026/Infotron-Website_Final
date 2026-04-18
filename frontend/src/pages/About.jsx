@@ -36,7 +36,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-slate-900 pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
+      <section className="py-24 lg:py-32" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center scroll-reveal">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-8">
@@ -57,7 +57,7 @@ const About = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {aboutStats.map((stat, index) => (
               <div key={index} className={`scroll-reveal delay-${index * 100} text-center`}>
-                <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+                <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
@@ -73,7 +73,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="scroll-reveal">
               <h2 className="text-4xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                   Our Story
                 </span>
               </h2>
@@ -101,7 +101,7 @@ const About = () => {
                   alt="Infotron Team Collaboration"
                   className="rounded-2xl shadow-2xl border border-blue-500/20"
                 />
-                <div className="absolute -z-10 -top-4 -right-4 w-full h-full bg-gradient-to-br from-blue-600/30 to-cyan-600/30 rounded-2xl"></div>
+                <div className="absolute -z-10 -top-4 -right-4 w-full h-full bg-gradient-to-br from-blue-600/30 to-violet-600/30 rounded-2xl"></div>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@ const About = () => {
                 elite talent, and full accountability for outcomes.
               </p>
             </div>
-            <div className="scroll-reveal delay-200 bg-slate-800/80 border border-cyan-500/20 rounded-2xl p-12 hover:border-cyan-500/40 transition-all duration-300">
+            <div className="scroll-reveal delay-200 bg-slate-800/80 border border-violet-500/20 rounded-2xl p-12 hover:border-violet-500/40 transition-all duration-300">
               <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
               <p className="text-lg text-gray-300 leading-relaxed">
                 To be the global standard for technology services delivery — recognized as the partner 
@@ -137,7 +137,7 @@ const About = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                 Core Values
               </span>
             </h2>
@@ -155,7 +155,7 @@ const About = () => {
                   key={index} 
                   className={`scroll-reveal delay-${index * 100} group bg-slate-800/80 border border-blue-500/20 rounded-2xl p-8 hover:border-blue-500/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
                 >
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-7 h-7 text-blue-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
@@ -172,7 +172,7 @@ const About = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center mb-16 scroll-reveal">
             <h2 className="text-4xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                 Our Culture
               </span>
             </h2>
@@ -201,7 +201,7 @@ const About = () => {
                 <div className="font-semibold">Team Collaboration</div>
               </div>
             </div>
-            <div className="scroll-reveal delay-100 relative rounded-2xl overflow-hidden h-64 shadow-lg group border border-cyan-500/20">
+            <div className="scroll-reveal delay-100 relative rounded-2xl overflow-hidden h-64 shadow-lg group border border-violet-500/20">
               <img 
                 src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
                 alt="Inclusive workplace meeting" 
@@ -223,7 +223,7 @@ const About = () => {
                 <div className="font-semibold">Leadership</div>
               </div>
             </div>
-            <div className="scroll-reveal delay-300 relative rounded-2xl overflow-hidden h-64 shadow-lg group border border-cyan-500/20">
+            <div className="scroll-reveal delay-300 relative rounded-2xl overflow-hidden h-64 shadow-lg group border border-violet-500/20">
               <img 
                 src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
                 alt="Global diverse workforce" 
@@ -238,7 +238,7 @@ const About = () => {
 
           <div className="text-center scroll-reveal delay-400">
             <Link to="/careers">
-              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:opacity-90 text-lg px-8 py-6">
+              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-violet-500 text-white hover:opacity-90 text-lg px-8 py-6">
                 Join Our Team
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -248,7 +248,7 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
+      <section className="py-24" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center scroll-reveal">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Let's Build Something Exceptional Together

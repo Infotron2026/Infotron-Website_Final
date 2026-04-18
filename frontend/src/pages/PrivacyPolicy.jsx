@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
 
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">2. Information We Collect</h2>
-            <h3 className="text-lg font-semibold text-emerald-400 mb-2">Personal Information</h3>
+            <h3 className="text-lg font-semibold text-blue-500 mb-2">Personal Information</h3>
             <p className="leading-relaxed mb-4">
               We may collect personal information that you voluntarily provide when you:
             </p>
@@ -34,7 +34,7 @@ const PrivacyPolicy = () => {
               and any other information you choose to provide.
             </p>
 
-            <h3 className="text-lg font-semibold text-emerald-400 mb-2 mt-6">Automatically Collected Information</h3>
+            <h3 className="text-lg font-semibold text-blue-500 mb-2 mt-6">Automatically Collected Information</h3>
             <p className="leading-relaxed">
               When you visit our website, we automatically collect certain information about your device, including 
               IP address, browser type, operating system, referring URLs, and information about how you interact 
@@ -154,9 +154,9 @@ const PrivacyPolicy = () => {
             <p className="leading-relaxed mb-4">
               If you have any questions about this Privacy Policy or our data practices, please contact us:
             </p>
-            <div className="bg-slate-800/50 border border-emerald-500/20 rounded-xl p-6">
+            <div className="bg-slate-800/50 border border-blue-600/20 rounded-xl p-6">
               <p className="mb-2"><strong className="text-white">Infotron Solutions</strong></p>
-              <p className="mb-2">Email: <a href="mailto:contact@infotronsolutions.com" className="text-emerald-400 hover:text-emerald-300">contact@infotronsolutions.com</a></p>
+              <p className="mb-2">Email: <a href="mailto:contact@infotronsolutions.com" className="text-blue-500 hover:text-blue-400">contact@infotronsolutions.com</a></p>
               <p className="mb-2">Phone: +1 (775) 305 9399</p>
               <p>Address: 3225 McLeod Dr. Ste 100, Las Vegas, NV 89121</p>
             </div>

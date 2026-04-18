@@ -11,7 +11,7 @@ const Header = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-emerald-500/20 shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-blue-600/20 shadow-lg">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between py-2">
           {/* Logo - proportionally scaled to fit header */}
@@ -28,7 +28,7 @@ const Header = () => {
             <Link
               to="/"
               className={`text-sm font-normal transition-colors ${
-                isActive('/') ? 'text-emerald-400' : 'text-gray-300 hover:text-emerald-400'
+                isActive('/') ? 'text-blue-500' : 'text-gray-300 hover:text-blue-500'
               }`}
             >
               Home
@@ -40,17 +40,17 @@ const Header = () => {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 text-sm font-normal text-gray-300 hover:text-emerald-400 transition-colors py-4">
+              <button className="flex items-center gap-1 text-sm font-normal text-gray-300 hover:text-blue-500 transition-colors py-4">
                 Services
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {/* Dropdown with invisible bridge to prevent gap */}
               <div className={`absolute top-full left-0 pt-0 ${servicesOpen ? 'block' : 'hidden'}`}>
-                <div className="w-72 bg-slate-800 rounded-lg shadow-xl border border-emerald-500/20 py-2 mt-0">
+                <div className="w-72 bg-slate-800 rounded-lg shadow-xl border border-blue-600/20 py-2 mt-0">
                   <Link
                     to="/services/managed-services"
-                    className="block px-6 py-3 hover:bg-emerald-500/10 transition-all"
+                    className="block px-6 py-3 hover:bg-blue-600/10 transition-all"
                     onClick={() => setServicesOpen(false)}
                   >
                     <div className="font-semibold text-white text-sm">Managed Services</div>
@@ -58,7 +58,7 @@ const Header = () => {
                   </Link>
                   <Link
                     to="/services/staff-augmentation"
-                    className="block px-6 py-3 hover:bg-emerald-500/10 transition-all"
+                    className="block px-6 py-3 hover:bg-blue-600/10 transition-all"
                     onClick={() => setServicesOpen(false)}
                   >
                     <div className="font-semibold text-white text-sm">Staff Augmentation</div>
@@ -66,7 +66,7 @@ const Header = () => {
                   </Link>
                   <Link
                     to="/services/business-consulting"
-                    className="block px-6 py-3 hover:bg-emerald-500/10 transition-all"
+                    className="block px-6 py-3 hover:bg-blue-600/10 transition-all"
                     onClick={() => setServicesOpen(false)}
                   >
                     <div className="font-semibold text-white text-sm">Business Consulting</div>
@@ -79,7 +79,7 @@ const Header = () => {
             <Link
               to="/about"
               className={`text-sm font-normal transition-colors ${
-                isActive('/about') ? 'text-emerald-400' : 'text-gray-300 hover:text-emerald-400'
+                isActive('/about') ? 'text-blue-500' : 'text-gray-300 hover:text-blue-500'
               }`}
             >
               About
@@ -88,7 +88,7 @@ const Header = () => {
             <Link
               to="/resources"
               className={`text-sm font-normal transition-colors ${
-                isActive('/resources') ? 'text-emerald-400' : 'text-gray-300 hover:text-emerald-400'
+                isActive('/resources') ? 'text-blue-500' : 'text-gray-300 hover:text-blue-500'
               }`}
             >
               Resources
@@ -97,7 +97,7 @@ const Header = () => {
             <Link
               to="/careers"
               className={`text-sm font-normal transition-colors ${
-                isActive('/careers') ? 'text-emerald-400' : 'text-gray-300 hover:text-emerald-400'
+                isActive('/careers') ? 'text-blue-500' : 'text-gray-300 hover:text-blue-500'
               }`}
             >
               Careers
@@ -106,7 +106,7 @@ const Header = () => {
             <Link
               to="/contact"
               className={`text-sm font-normal transition-colors ${
-                isActive('/contact') ? 'text-emerald-400' : 'text-gray-300 hover:text-emerald-400'
+                isActive('/contact') ? 'text-blue-500' : 'text-gray-300 hover:text-blue-500'
               }`}
             >
               Contact
@@ -116,12 +116,12 @@ const Header = () => {
           {/* CTA Buttons - Refined with Brand Colors */}
           <div className="hidden lg:flex items-center gap-3">
             <Link to="/careers">
-              <Button variant="ghost" className="text-gray-300 hover:text-emerald-400 text-sm font-normal">
+              <Button variant="ghost" className="text-gray-300 hover:text-blue-500 text-sm font-normal">
                 Join Our Team
               </Button>
             </Link>
             <Link to="/contact?type=client">
-              <Button className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white hover:shadow-lg hover:shadow-emerald-500/30 text-sm font-semibold px-6 transition-all duration-300">
+              <Button className="bg-gradient-to-r from-blue-600 to-violet-500 text-white hover:shadow-lg hover:shadow-blue-600/30 text-sm font-semibold px-6 transition-all duration-300">
                 Talk to Us
               </Button>
             </Link>
@@ -167,7 +167,7 @@ const Header = () => {
               </Link>
               <div className="flex flex-col gap-3 mt-4">
                 <Link to="/contact?type=client" onClick={() => setMobileMenuOpen(false)}>
-                  <Button className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-white">
+                  <Button className="w-full bg-gradient-to-r from-blue-600 to-violet-500 text-white">
                     Talk to Us
                   </Button>
                 </Link>

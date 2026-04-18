@@ -53,7 +53,7 @@ const ManagedServices = () => {
   return (
     <div className="min-h-screen bg-slate-900 pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
+      <section className="py-24 lg:py-32 bg-gradient-to-br from-[#0B1F3A] via-[#2563EB] to-[#7C3AED]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="scroll-reveal">
@@ -70,7 +70,7 @@ const ManagedServices = () => {
                 we deliver results.
               </p>
               <Link to="/contact?type=client&service=managed-services">
-                <Button size="lg" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:opacity-90 text-lg px-8 py-6">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6">
                   Discuss Your Requirements
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -83,7 +83,7 @@ const ManagedServices = () => {
                   alt="Managed Technology Operations"
                   className="rounded-2xl shadow-2xl border border-blue-500/20"
                 />
-                <div className="absolute -z-10 -top-4 -right-4 w-full h-full bg-gradient-to-br from-blue-600/30 to-cyan-600/30 rounded-2xl"></div>
+                <div className="absolute -z-10 -top-4 -right-4 w-full h-full bg-gradient-to-br from-blue-600/30 to-violet-600/30 rounded-2xl"></div>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ const ManagedServices = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                 Key Benefits
               </span>
             </h2>
@@ -112,7 +112,7 @@ const ManagedServices = () => {
                   className={`scroll-reveal delay-${index * 100} group bg-slate-800/80 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/50 hover:bg-slate-800 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300`}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="w-6 h-6 text-blue-400" />
                     </div>
                     <p className="text-gray-300 leading-relaxed pt-2">{benefit.text}</p>
@@ -129,7 +129,7 @@ const ManagedServices = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                 Our Methodology
               </span>
             </h2>
@@ -151,12 +151,12 @@ const ManagedServices = () => {
                   
                   <div className="bg-slate-800/50 border border-blue-500/20 rounded-2xl p-8 h-full hover:border-blue-500/50 hover:bg-slate-800/80 transition-all duration-300 relative">
                     {/* Step number badge */}
-                    <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-500/30">
+                    <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-br from-blue-500 to-violet-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-500/30">
                       {item.step}
                     </div>
                     
                     {/* Icon */}
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="w-7 h-7 text-blue-400" />
                     </div>
                     
@@ -174,7 +174,7 @@ const ManagedServices = () => {
       <section className="py-24 bg-slate-800/30">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 scroll-reveal">
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
               Success Story
             </span>
           </h2>
@@ -206,19 +206,19 @@ const ManagedServices = () => {
                   <h4 className="font-bold text-blue-300 mb-3">Results</h4>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-300">Infrastructure scaled to handle 500M+ daily transactions</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-300">Reduced latency from 120ms to 35ms</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-300">Achieved 99.99% uptime during peak trading</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-300">Saved $2.3M annually in infrastructure costs</span>
                     </li>
                   </ul>
@@ -238,7 +238,7 @@ const ManagedServices = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
+      <section className="py-24" style={{background: 'linear-gradient(135deg, #0B1F3A 0%, #2563EB 50%, #7C3AED 100%)'}}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center scroll-reveal">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Accelerate Your Technology Delivery?
