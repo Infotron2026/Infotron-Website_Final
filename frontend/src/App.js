@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import ManagedServices from "@/pages/ManagedServices";
 import StaffAugmentation from "@/pages/StaffAugmentation";
 import BusinessConsulting from "@/pages/BusinessConsulting";
+import CapitalProjects from "@/pages/CapitalProjects";
 import About from "@/pages/About";
 import Resources from "@/pages/Resources";
 import Careers from "@/pages/Careers";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/services/managed-services" element={<ManagedServices />} />
           <Route path="/services/staff-augmentation" element={<StaffAugmentation />} />
           <Route path="/services/business-consulting" element={<BusinessConsulting />} />
+          <Route path="/capital-projects" element={<CapitalProjects />} />
           <Route path="/about" element={<About />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/case-studies/:id" element={<Resources />} />
