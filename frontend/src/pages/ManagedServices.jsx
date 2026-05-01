@@ -65,7 +65,7 @@ const ManagedServices = () => {
                 End-to-End Technology Operations with Full Accountability
               </h1>
               <p className="text-lg lg:text-xl text-gray-300 leading-relaxed mb-10">
-                Infotron's Managed Services deliver complete ownership of your technology initiatives — 
+                Infotron's Managed Services deliver complete ownership of your technology initiatives, 
                 from architecture to deployment to ongoing operations. We don't just provide resources; 
                 we deliver results.
               </p>

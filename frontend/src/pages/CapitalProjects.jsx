@@ -99,7 +99,7 @@ const CapitalProjects = () => {
     {
       icon: Target,
       title: 'Execution-Focused Approach',
-      description: 'We prioritize delivery outcomes—ensuring projects move forward with clarity, structure, and accountability.'
+      description: 'We prioritize delivery outcomes, ensuring projects move forward with clarity, structure, and accountability.'
     },
     {
       icon: UserCheck,
@@ -109,12 +109,12 @@ const CapitalProjects = () => {
     {
       icon: Globe,
       title: 'Flexible Global Delivery',
-      description: 'We operate across the US, Canada, UK, and India—supporting projects with scalable and responsive delivery models.'
+      description: 'We operate across the US, Canada, UK, and India, supporting projects with scalable and responsive delivery models.'
     },
     {
       icon: Activity,
       title: 'Integrated Digital Support',
-      description: 'We enhance execution through data visibility, reporting, and workflow efficiency—without adding complexity.'
+      description: 'We enhance execution through data visibility, reporting, and workflow efficiency, without adding complexity.'
     },
     {
       icon: Zap,
@@ -229,23 +229,6 @@ const CapitalProjects = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* INTRO SECTION */}
-      <section className="py-24 bg-[#111827]/50">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl mx-auto text-center scroll-reveal">
-            <p className="text-lg lg:text-xl text-gray-300 leading-relaxed mb-8">
-              Infotron Solutions supports organizations in the successful delivery of large-scale programs and capital projects.
-            </p>
-            <p className="text-lg text-gray-400 leading-relaxed mb-8">
-              We provide specialized expertise across project controls, PMO, digital delivery, and operational support—helping teams improve visibility, control costs, and execute with confidence.
-            </p>
-            <p className="text-lg text-gray-400 leading-relaxed">
-              Our approach combines domain-aligned talent, structured delivery models, and digital enablement to strengthen project outcomes.
-            </p>
           </div>
         </div>
       </section>
@@ -424,13 +407,8 @@ const CapitalProjects = () => {
                     {/* Top thin accent */}
                     <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
-                    <div className="flex items-center gap-4 mb-5">
-                      <div className="w-11 h-11 rounded-lg border border-white/15 bg-white/[0.03] flex items-center justify-center group-hover:bg-white/[0.06] transition-colors duration-300">
-                        <IconComponent className="w-5 h-5 text-white/80" strokeWidth={1.75} />
-                      </div>
-                      <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/40">
-                        0{index + 1}
-                      </span>
+                    <div className="w-11 h-11 rounded-lg border border-white/15 bg-white/[0.03] flex items-center justify-center mb-6 group-hover:bg-white/[0.06] transition-colors duration-300">
+                      <IconComponent className="w-5 h-5 text-white/80" strokeWidth={1.75} />
                     </div>
 
                     <h3 className="text-lg font-semibold text-white mb-3 leading-snug">

@@ -66,7 +66,7 @@ const StaffAugmentation = () => {
               </h1>
               <p className="text-lg lg:text-xl text-gray-300 leading-relaxed mb-10">
                 Scale your engineering capacity with hand-picked professionals who integrate as 
-                true team members — not contractors. Get the skills you need, when you need them, 
+                true team members, not contractors. Get the skills you need, when you need them, 
                 without the overhead of permanent hiring.
               </p>
               <Link to="/contact?type=client&service=staff-augmentation">

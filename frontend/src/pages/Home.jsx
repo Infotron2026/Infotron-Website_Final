@@ -116,7 +116,7 @@ const Home = () => {
                 Build. Operate. Transfer.
               </h2>
               <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                A delivery-first model designed for companies that want speed now — and ownership later.
+                A delivery-first model designed for companies that want speed now, and ownership later.
               </p>
             </div>
 
@@ -124,7 +124,7 @@ const Home = () => {
             <p className="text-lg text-gray-400 leading-relaxed mb-10 max-w-3xl mx-auto text-center">
               We help companies build high-performing engineering teams, operate them to deliver real outcomes, 
               and transfer full ownership when the organization is ready. This model reduces execution risk, 
-              accelerates time-to-market, and ensures long-term continuity — without vendor lock-in.
+              accelerates time-to-market, and ensures long-term continuity, without vendor lock-in.
             </p>
 
             {/* Three Pillars */}
@@ -428,7 +428,7 @@ const Home = () => {
                 </p>
                 
                 <div className="pt-6 border-t border-gray-700">
-                  <div className="font-semibold text-white text-lg">— {testimonial.author}</div>
+                  <div className="font-semibold text-white text-lg">{testimonial.author}</div>
                   <div className="text-sm text-gray-400">{testimonial.title}, {testimonial.company}</div>
                 </div>
               </div>

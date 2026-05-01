@@ -46,7 +46,7 @@ const BusinessConsulting = () => {
     { text: 'AI strategy development and machine learning roadmaps', icon: Target },
     { text: 'Data-driven insights powered by intelligent analytics', icon: LineChart },
     { text: 'Risk mitigation through proven transformation methodologies', icon: CheckCircle },
-    { text: 'Implementation support beyond advisory — we help execute', icon: TrendingUp },
+    { text: 'Implementation support beyond advisory, we help execute', icon: TrendingUp },
     { text: 'Knowledge transfer to build internal AI/ML capabilities', icon: Lightbulb }
   ];
 

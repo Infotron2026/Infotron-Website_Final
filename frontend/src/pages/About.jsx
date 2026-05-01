@@ -84,7 +84,7 @@ const About = () => {
                 We focus on delivering structured execution support through a combination of domain-aligned talent, scalable delivery models, and practical digital enablement.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Our approach emphasizes adaptability, clarity, and consistent delivery—helping teams navigate complexity and execute with confidence.
+                Our approach emphasizes adaptability, clarity, and consistent delivery, helping teams navigate complexity and execute with confidence.
               </p>
               <p className="text-base text-gray-400 leading-relaxed border-l-2 border-[#3B82F6]/40 pl-4">
                 Experience supporting complex programs across multiple industries and geographies.
@@ -119,7 +119,7 @@ const About = () => {
             <div className="scroll-reveal delay-200 bg-[#111827]/80 border border-violet-500/20 rounded-2xl p-12 hover:border-violet-500/40 transition-all duration-300">
               <h2 className="text-3xl font-bold text-white mb-4">Our Vision</h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                To be the global standard for technology services delivery — recognized as the partner 
+                To be the global standard for technology services delivery, recognized as the partner 
                 of choice for organizations that demand world-class talent, predictable execution, 
                 and measurable business impact.
               </p>
