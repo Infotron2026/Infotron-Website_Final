@@ -17,9 +17,10 @@ const Header = () => {
           {/* Logo - proportionally scaled to fit header */}
           <Link to="/" className="flex items-center">
             <img 
-              src="https://customer-assets.emergentagent.com/job_d8f46f0b-1d63-4dfd-8604-cd7ea5aab6e2/artifacts/6cklrdnr_Logo%20white%20no%20background.png" 
+              src="https://customer-assets.emergentagent.com/job_ba897003-eeca-4b0e-8e12-dd77cec76f35/artifacts/mcntdahb_INFOTRON%20Gradient%20Logo%20cropped.png" 
               alt="Infotron Solutions" 
               className="h-12 lg:h-14 w-auto object-contain"
+              data-testid="header-logo"
             />
           </Link>
 

@@ -10,9 +10,10 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <img 
-              src="https://customer-assets.emergentagent.com/job_d8f46f0b-1d63-4dfd-8604-cd7ea5aab6e2/artifacts/6cklrdnr_Logo%20white%20no%20background.png" 
+              src="https://customer-assets.emergentagent.com/job_ba897003-eeca-4b0e-8e12-dd77cec76f35/artifacts/mcntdahb_INFOTRON%20Gradient%20Logo%20cropped.png" 
               alt="Infotron Solutions" 
               className="h-16 w-auto object-contain mb-4"
+              data-testid="footer-logo"
             />
             <p className="text-gray-400 mb-6">
               Delivering enterprise IT services, elite talent, and strategic consulting to global organizations.
@@ -107,13 +108,21 @@ const Footer = () => {
         {/* Global Offices */}
         <div className="border-t border-slate-800 mt-12 pt-8">
           <h4 className="text-sm font-semibold text-[#3B82F6] mb-6 uppercase tracking-wider">Global Offices</h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex items-start gap-3">
               <MapPin className="w-4 h-4 text-[#3B82F6] mt-1 flex-shrink-0" />
               <div className="text-sm text-gray-400">
                 <span className="font-semibold text-white">USA</span><br />
                 3225 McLeod Dr. Ste 100<br />
                 Las Vegas, NV 89121
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <MapPin className="w-4 h-4 text-[#3B82F6] mt-1 flex-shrink-0" />
+              <div className="text-sm text-gray-400">
+                <span className="font-semibold text-white">USA</span><br />
+                27125 Sierra Hwy, Ste 325<br />
+                Santa Clarita, CA 91351
               </div>
             </div>
             <div className="flex items-start gap-3">

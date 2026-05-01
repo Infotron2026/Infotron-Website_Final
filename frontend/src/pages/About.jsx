@@ -54,7 +54,7 @@ const About = () => {
       {/* Stats */}
       <section className="py-20 bg-[#111827]/50">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {aboutStats.map((stat, index) => (
               <div key={index} className={`scroll-reveal delay-${index * 100} text-center`}>
                 <div className="text-5xl font-bold bg-gradient-to-r from-[#3B82F6] to-[#7C3AED] bg-clip-text text-transparent mb-2">
@@ -78,20 +78,16 @@ const About = () => {
                 </span>
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Infotron Solutions was founded in 2021 with a simple mission: deliver technology solutions 
-                with the speed and quality that enterprise organizations deserve. We started as a small team 
-                of senior engineers frustrated with the gap between what clients needed and what traditional 
-                consulting firms delivered.
+                Infotron Solutions was built to support organizations operating in complex, fast-moving environments.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                In just a few years, we've grown into a global technology partner serving Fortune 500 companies, 
-                high-growth SaaS platforms, hedge funds, and private equity-backed firms. We've delivered 
-                500+ complex technology projects, from algorithmic trading systems to enterprise-wide digital 
-                transformations.
+                We focus on delivering structured execution support through a combination of domain-aligned talent, scalable delivery models, and practical digital enablement.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Today, Infotron is recognized for execution-first delivery, elite talent, and a 92% client 
-                retention rate that reflects our commitment to long-term partnership over transactional relationships.
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                Our approach emphasizes adaptability, clarity, and consistent delivery—helping teams navigate complexity and execute with confidence.
+              </p>
+              <p className="text-base text-gray-400 leading-relaxed border-l-2 border-[#3B82F6]/40 pl-4">
+                Experience supporting complex programs across multiple industries and geographies.
               </p>
             </div>
             <div className="scroll-reveal delay-200">

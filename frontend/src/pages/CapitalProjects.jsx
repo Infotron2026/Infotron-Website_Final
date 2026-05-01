@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
-import { ArrowRight, CheckCircle, BarChart3, Users, DollarSign, HardHat, LineChart, Building2, Factory, Radio, Server, Warehouse } from 'lucide-react';
+import { ArrowRight, CheckCircle, BarChart3, Users, DollarSign, HardHat, LineChart, Building2, Factory, Radio, Server, Warehouse, Target, UserCheck, Globe, Activity, Zap } from 'lucide-react';
 
 const CapitalProjects = () => {
   const observerRef = useRef(null);
@@ -96,11 +96,31 @@ const CapitalProjects = () => {
   ];
 
   const whyInfotron = [
-    'Execution-focused delivery',
-    'Project-ready, pre-vetted talent',
-    'Global delivery capability (US, Canada, UK, India)',
-    'Flexible engagement models',
-    'Strong alignment with fast-paced project environments'
+    {
+      icon: Target,
+      title: 'Execution-Focused Approach',
+      description: 'We prioritize delivery outcomes—ensuring projects move forward with clarity, structure, and accountability.'
+    },
+    {
+      icon: UserCheck,
+      title: 'Program-Ready Talent',
+      description: 'Our teams are experienced in live project environments, enabling immediate contribution without ramp-up delays.'
+    },
+    {
+      icon: Globe,
+      title: 'Flexible Global Delivery',
+      description: 'We operate across the US, Canada, UK, and India—supporting projects with scalable and responsive delivery models.'
+    },
+    {
+      icon: Activity,
+      title: 'Integrated Digital Support',
+      description: 'We enhance execution through data visibility, reporting, and workflow efficiency—without adding complexity.'
+    },
+    {
+      icon: Zap,
+      title: 'Aligned to Fast-Paced Environments',
+      description: 'We understand the pace and demands of large-scale programs and adapt quickly to evolving project needs.'
+    }
   ];
 
   const deliveryModels = [
@@ -386,21 +406,42 @@ const CapitalProjects = () => {
                 Why Infotron
               </span>
             </h2>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              A delivery partner aligned to the pace and discipline of large-scale programs.
+            </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {whyInfotron.map((item, index) => (
-                <div
-                  key={index}
-                  className={`scroll-reveal delay-${index * 100} flex items-center gap-4 bg-[#111827]/80 border border-[#3B82F6]/20 rounded-xl p-6 hover:border-[#3B82F6]/50 transition-all duration-300`}
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#3B82F6]/20 to-[#7C3AED]/20 border border-[#3B82F6]/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-6 h-6 text-[#3B82F6]" />
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {whyInfotron.map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div
+                    key={index}
+                    className={`scroll-reveal delay-${index * 100} group relative bg-[#111827]/60 border border-white/10 rounded-2xl p-8 hover:border-white/25 transition-all duration-300`}
+                    data-testid={`why-infotron-card-${index}`}
+                  >
+                    {/* Top thin accent */}
+                    <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+
+                    <div className="flex items-center gap-4 mb-5">
+                      <div className="w-11 h-11 rounded-lg border border-white/15 bg-white/[0.03] flex items-center justify-center group-hover:bg-white/[0.06] transition-colors duration-300">
+                        <IconComponent className="w-5 h-5 text-white/80" strokeWidth={1.75} />
+                      </div>
+                      <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-white/40">
+                        0{index + 1}
+                      </span>
+                    </div>
+
+                    <h3 className="text-lg font-semibold text-white mb-3 leading-snug">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-400 text-base leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
-                  <span className="text-gray-300 text-lg">{item}</span>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Positioning Line */}

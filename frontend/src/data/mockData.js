@@ -301,7 +301,6 @@ export const companyValues = [
 ];
 
 export const aboutStats = [
-  { number: "500+", label: "Enterprise Projects Delivered" },
   { number: "92%", label: "Client Retention Rate" },
   { number: "2000+", label: "Technical Candidates Evaluated" },
   { number: "15+", label: "Years of Leadership Experience" }
